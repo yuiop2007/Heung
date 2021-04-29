@@ -81,8 +81,23 @@
     fruits.splice(1,1);
     document.write("6. " + fruits + "<br/>");
     
-    fruits.splice(1,1,"옥수수","자몽");
+    fruits.splice(1,0,"옥수수","자몽");
     document.write("7. " + fruits + "<br/>");
+
+    // 두개의 배열을 묶어서 작업처리(concat())
+    const fruits2 = ["옥수수","수박"];
+    const newFruits = fruits.concat(fruits2);  /* 새로운 배열이 생성된다. */
+    document.write("8. " + newFruits + "<br/>");
+
+    // 배열안의 자료의 검색?(includes():검색결과가 있으면 true/없으면 false, indexOf())
+    document.write("9. " + fruits.includes("옥수수") + "<br/>");
+    document.write("10. " + fruits.includes("옥소수") + "<br/>");
+    document.write("11. " + fruits.indexOf("옥소수") + "<br/>");
+    document.write("12. " + fruits.indexOf("옥수수") + "<br/>");
+    
+    // 뒤에서 부터 검색(lastIndexOf())
+    document.write("13. " + newFruits + "<br/>");
+    document.write("14. " + newFruits.lastIndexOf("옥수수") + "<br/>");
   </script>
 </head>
 <body>
