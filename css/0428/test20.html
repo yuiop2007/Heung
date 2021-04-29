@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test18.html</title>
+  <script>
+    function fCheck() {
+      var su1 = document.myform.su1.value;
+      var su2 = document.myform.su2.value;
+
+      if(su1 == "") {
+        alert("수1을 입력하세요?");
+        document.myform.su1.focus();
+        // return false;
+      }
+      else if(su2 == "") {
+        alert("수2를 입력하세요?");
+        document.myform.su2.focus();
+        // return false;
+      }
+      else {
+        alert(su1 + su2);
+        // alert("su1 + su2 = " +(parseInt(su1)+parseInt(su2)));
+        alert("su1 + su2 = " +(su1+su2));
+        var yn = confirm("계속 하시겠습니까?");
+        if(yn){
+          document.myform.su1.value="";
+          document.myform.su2.value = "";
+          document.myform.su1.focus();
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <div>
+      <p>수1 : <input type="number" name="su1"/></p>
+      <p>수2 : <input type="number" name="su2"/></p>
+    </div>
+    <div>
+      <input type="button" value="체크" onclick="fCheck()"/>
+      <input type="reset" value="취소"/>
+    </div>
+  </form>
+</body>
+</html>

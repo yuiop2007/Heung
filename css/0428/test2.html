@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test2.html(FullDownMenu)</title>
+  <style>
+    body {
+      margin: 0px;
+      font-size: 0.8em;
+    }
+    .menubar {
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+    }
+    .menubar ul {
+      background-color: gray;
+      height: 40px;
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+    }
+    .menubar ul li {
+      float: left;
+      width: 100px;
+      position: relative;
+    }
+    .menubar ul li a {
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+      color: rgb(7, 3, 3);
+    }
+    .menubar ul li:hover {
+      background-color: rgb(154, 233, 154);
+    }
+    .menubar ul li a:hover {
+      color: rgb(93, 60, 98);
+    }
+    /* 하위 메뉴 */
+    .menubar ul li ul {
+      display: none;
+      margin: 0px;
+      padding: 0px;
+    }
+    .menubar ul li:hover ul {
+      display: block;
+    }
+    .menubar ul li ul li {
+      width: 100px;
+      background-color: gray;
+    }
+    .active {
+      background-color: rgb(150, 251, 150);
+    }
+    .subMenu {
+      position: absolute;
+      height: 0px;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+    .subMenu li {
+      display: block;
+    }
+    .topMenu:hover .subMenu {
+      height:160px;
+    }
+  </style>
+</head>
+<body>
+<div class="menubar">
+  <ul>
+    <li><a href="#">홈으로</a></li>
+    <li class="topMenu">
+      <a href="#">회사소개</a>
+      <ul class="subMenu">
+        <li><a href="#">회사내역</a></li>
+        <li><a href="#">대표자인사</a></li>
+        <li><a href="#">회사위치</a></li>
+      </ul>
+    </li>
+    <li class="topMenu">
+      <a href="#">상품소개</a>
+      <ul class="subMenu">
+        <li><a href="#">전자제품</a></li>
+        <li><a href="#">생활용품</a></li>
+        <li><a href="#">주방용품</a></li>
+        <li><a href="#">신발류</a></li>
+      </ul>
+    </li>
+    <li class="topMenu">
+      <a href="#">고객전용</a>
+      <ul class="subMenu">
+        <li><a href="#">고객쉼터</a></li>
+        <li><a href="#">고객의소리</a></li>
+        <li><a href="#">Q & A</a></li>
+      </ul>
+    </li>
+    <li style="float:right" class="topMenu">
+      <a href="#" class="active">도움말</a>
+      <ul class="subMenu">
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test5.html(매개변수값 처리2)</title>
+  <script>
+    'use strict';
+    
+    function showMessage(message, name = "성명") {
+      document.write(message + " : " + name + "<br/>");
+      document.write(`${message} 하세요 ${name} 님`);
+    }
+
+    showMessage("안녕");
+  </script>
+</head>
+<body>
+  <h2>test5.html(매개변수값 처리2)</h2>
+</body>
+</html>

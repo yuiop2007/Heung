@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>익명함수3</title>
+  <script>
+    'use strict';
+  
+    let msgPrint = function(){
+      document.write("이곳은 익명 함수 메시지 처리부 ")
+    };
+  
+    msgPrint();
+  
+    // Arrow function사용한 익명함수 호출
+    let examPrint = () => document.write("Arrow 연습");
+    examPrint();
+  
+    // Arrow 이용한 두수의 합
+    let add = (su1, su2) => su1+su2;
+    let add2 = (su1, su2) => {
+      let res2 = su1 + su2;
+      return res2;
+    }
+  
+    let res = add(10, 20);
+    document.write(res);
+    let res2 = add2(30, 40);
+    document.write(res2);
+    document.write(add2(30,40));
+  
+  
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

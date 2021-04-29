@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클래스(게터세터상속)</title>
+  <script>
+    'use strict';
+  
+    class Shape{
+  
+      constructor(width, height, color){
+        this.width = width;
+        this.height = height;
+        this.color = color;
+      }
+      get color(){
+        return this._color;
+      }
+      set color(color){
+        if(color == "깜정"){
+          this._color = "검정";
+        }
+        else if(color == "하양"){
+          this._color = "흰색";
+        }
+        else {
+          this._color = color;
+        }
+      }
+    }
+    class Rectangle extends Shape {}
+  
+    let rec = new Rectangle(10, 20, "하양");
+    document.write(rec.color);
+    
+    
+  
+  
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

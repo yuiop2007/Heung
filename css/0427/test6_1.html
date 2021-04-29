@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test6.html(미디어쿼리연습2)</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    #wrapper {
+      width: 1000px;
+      margin: 0 auto;
+    }
+    header {
+      width: 1000px;
+      height: 100px;
+      background-color: rgb(131, 0, 131);
+    }
+    nav {
+      width: 1000px;
+      height: 30px;
+      background-color: rgb(170, 25, 170);
+    }
+    aside {
+      width: 200px;
+      height: 600px;
+      background-color: rgb(224, 63, 224);
+      float:left;
+    }
+    section {
+      width: 800px;
+      height: 600px;
+      background-color: rgb(247, 106, 247);
+      float:left;
+    }
+    footer {
+      clear: both;
+      width: 1000px;
+      height: 100px;
+      background-color: rgb(248, 168, 248);
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      이곳은 머리글
+    </header>
+    <nav>
+      이곳은 메뉴
+    </nav>
+    <aside>
+      이곳은 왼쪽메뉴(광고)
+    </aside>
+    <section>
+      <div class="container">
+        <h2>Hover Rows</h2>
+        <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+              <td>john@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-info">Info</button>
+    </section>
+    <footer>
+      꼬리말(저작권, 주소등을 표시합니다.)
+    </footer>
+  </div>
+</body>
+</html>

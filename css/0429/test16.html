@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오브젝트다루기2</title>
+  <script>
+    'use strict'
+  
+    const user1 = {name : "홍길동", age : 22};
+    const user2 = {name : "홍길동", age : 22};
+    const user3 = {name : "홍길동", age : 22};
+    const user4 = new user("소나무", 35);
+  
+    function user(name, age){
+      this.name = name;
+      this.age = age;
+    }
+  
+    function userPrint(exUser){
+      document.write(exUser.name + exUser.age);
+    }
+  
+    userPrint(user1);
+    userPrint(user2);
+    userPrint(user3);
+    userPrint(user4);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

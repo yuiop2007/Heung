@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test4</title>
+    <style>
+        table{
+            border: 1px solid gray;
+            /* 간격없애기 콜랩스 */
+            border-collapse: collapse
+            ;
+        }
+        th, td{
+            padding: 20px;
+            border: 1px solid gray;
+        }
+        th{
+            background-color: pink;
+        }
+        .th2{
+            background-color: greenyellow;
+        }
+
+        .alignLeft{
+            width: 100px;
+            text-align: left;
+        }
+
+        tr :hover{
+            background-color: gray;  
+        }
+        tr:nth-child(3){
+            /* tr의 3번째 */
+            /* 2n짝수 2n+1홀수 */
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <h2>테이블에 스타일 적용</h2>
+    <table>
+        <tr>
+            <th>제목1</th>
+            <th class ="th2">제목2</th>
+            <th>제목3</th>
+        </tr>
+        <tr>
+            <td>제목1</td>
+            <td class ="alignLeft">제목2</td>
+            <td>제목3</td>
+        </tr>
+        <tr>
+            <td>제목1</td>
+            <td>제목2</td>
+            <td>제목3</td>
+        </tr>
+    </table>
+    <br/><br/><br/><br/><br/>
+    <h2>테이블에 스타일 적용2</h2>
+    <table>
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+        </tr>
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+        </tr>
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+        </tr>
+    </table>
+    <br/><br/><br/><br/><br/>
+</body>
+</html>

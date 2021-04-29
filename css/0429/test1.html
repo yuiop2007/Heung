@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test1.html(switch case문)</title>
+  <script>
+    'use strict';
+
+    function check() {
+      let jumsu = document.myform.jumsu.value;
+      let jum = parseInt(jumsu / 10);
+      console.log("jum : " + jum);
+
+      let gr;
+      switch(jum) {
+        case 10:
+        case 9:
+          gr = "A";
+          break;
+        case 8:
+          gr = "B";
+          break;
+        case 7:
+          gr = "C";
+          break;
+        case 6:
+          gr = "D";
+          break;
+        default:
+          gr = "F";
+      }
+      document.write("입력된 점수 : " + jumsu + "<br/>");
+      document.write("학점 : " + gr + "입니다.<br/>");
+      document.write("<a href='test1.html'>다시시도</a><br/>");
+    }
+  </script>
+</head>
+<body>
+  <h2>학점 구하기</h2>
+  <form name="myform">
+    <input type="number" name="jumsu"/>
+    <input type="button" value="학점구하기" onclick="check()"/>
+  </form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #boxform{
+        background-color: rgb(159, 182, 189);
+        margin: 20px;
+        padding: 20px;
+        border-radius: 15px;
+
+    }
+    input[type=text], input[type=number], input[type=submit], select{
+        /* display: block; 블록화하면 줄내려감 */
+        display: inline-block;
+        width:  100%;
+        margin: 10px 0;
+        padding: 12px 0;
+        border: 1px solid #ccc;
+    }
+    input[type=text]:hover, input[type=number]:hover, input[type=submit]:hover, select:hover{
+        background-color: khaki;
+    }
+    input[type=submit]:hover{
+        cursor: pointer;
+        background-color: lightcoral;
+    }
+</style>
+<body>
+    <div id="boxform">
+        <form>
+            <label for="name">성명</label>
+            <input type="text" name="name" id="name" placeholder="이름입력" autofocus/>
+            <label for="age">나이</label>
+            <input type="number" name="age" id="age" value="20"/>
+            <label for="job">직업</label>
+            <select name="job" id="job">
+                <option value="">직업선택</option>
+                <option value="학생">학생</option>
+                <option value="회사원">회사원</option>
+                <option value="공무원">공무원</option>
+                <option value="군인">군인</option>
+                <option value="경찰">경찰</option>
+            </select>
+            <input type="submit" value="회원가입"/>
+        </form>
+    </div>
+</body>
+</html>

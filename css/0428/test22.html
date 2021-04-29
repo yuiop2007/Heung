@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let tot=0;
+        function sum1(params) {
+            let tot = 0;
+            for(let i=1; i<=10; i++){
+                tot += i;
+            }
+            document.write("1~10까지합" + tot);
+        }
+
+        function sum2(params) {
+            let tot = 0;
+            for(let i=0; i<=10; i+=2){
+                tot += i;
+            }
+            document.write("1~10까지 짝수합" + tot);
+        }
+        function sum3(params) {
+            let tot = 0;
+            for(let i=1; i<=100; i++){
+                tot += i;
+                if(i%10==0){
+                    document.write("1~"+i+"까지의 합 : "+tot+"<br/>");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="1~10까지합" onclick="sum1()"/>
+    <input type="button" value="1~10까지 짝수합" onclick="sum2()"/>
+    <input type="button" value="1~100까지 각 10항까지의 합" onclick="sum3()"/>
+</body>
+</html>

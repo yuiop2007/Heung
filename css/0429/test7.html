@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>익명함수</title>
+  <script>
+    'use strict';
+
+    // 일반함수
+    function msgPrint(){
+      document.write("일반함수에서의 호출");
+    }
+    // 익명함수(anonymous) 함수명 대신에 변수명으로 처리
+    let msgPrint2 = function(){
+      document.write("익명함수에서의 호출");
+    }
+
+    msgPrint();
+    msgPrint2();
+
+    let againPrint2 = msgPrint2;
+    againPrint2();
+  </script>
+</head>
+<body>
+  <h2>익명함수(anonymous function)</h2>
+</body>
+</html>

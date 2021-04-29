@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test18.html</title>
+  <script>
+    function fCheck() {
+      var name = document.myform.name.value;
+      var age = document.myform.age.value;
+
+      if(name == "") {
+        alert("이름을 입력하세요?");
+        document.myform.name.focus();
+        // return false;
+      }
+      else if(age == "") {
+        alert("나이를 입력하세요?");
+        document.myform.age.focus();
+        // return false;
+      }
+      else {
+        alert("name : " + name + " , age : " + age);
+        var yn = confirm("계속 하시겠습니까?");
+        if(yn){
+          document.myform.name.value="";
+          document.myform.age.value = "";
+          document.myform.name.focus();
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <div>
+      <p>성명 : <input type="text" name="name"/></p>
+      <p>나이 : <input type="text" name="age" value="20"/></p>
+    </div>
+    <div>
+      <input type="button" value="체크" onclick="fCheck()"/>
+      <input type="reset" value="취소"/>
+    </div>
+  </form>
+</body>
+</html>

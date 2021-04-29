@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>object에 추가/삭제</title>
+  <script>
+    'use strict';
+
+    function userPrint(us) {
+      document.write(us.name + " / " + us.age + "<br/>");
+    }
+    function userPrint2(us2) {
+      document.write(us2.name + " / " + us2.age+ " / " + us2.job + "<br/>");
+    }
+
+    const user = {name:"홍길동", age:22};
+    userPrint(user);
+
+    // key와 value를 추가
+    user.job = "학생";
+    userPrint2(user);
+    
+    // 삭제
+    delete user.job;
+    userPrint2(user);
+
+    // 값을 받아올때 배열타입으로 가져올수도 있다.
+    let name1 = user.name;
+    let name2 = user["name"];  /* 필드명(key)은 문자열로 감싼다. */
+    document.write(name1 + " , " + name2);
+
+    //키 추출
+    for(let key in user){
+      document.write("key : " + key + "/");
+    }
+
+    //값 추출
+    for(let value in user){
+      document.write(user[value]);
+    }
+
+    for(let key in user){
+      document.write(key+user[key]);
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test4.html(다양한 for문 연습)</title>
+  <script>
+    'use strict';
+
+    function forExam1(a,b,c,d,e) {
+      console.log("a : " + a);
+      console.log("b : " + b);
+      console.log("c : " + c);
+      console.log("d : " + d);
+      console.log("e : " + e);
+    }
+
+    // 여러개의 변수를 배열에 담는다.
+    function forExam2(...args) {
+      console.clear();
+      for(let i=0; i<args.length ; i++) {
+        console.log(args[i]);
+        document.write(args[i] + " / ");
+      }
+    }
+    
+    // 향상된 for문
+    function forExam3(...args) {
+      document.write("<br/><br/>");
+      for(let arg of args) {
+        document.write(arg + " / "); 
+      }
+    }
+
+    function forExam4(...args) {
+      document.write("<br/><br/>");
+      args.forEach((arg) => document.write(arg + " / "));
+    }
+
+    forExam1("하나","둘",3,"넷",5);
+    forExam2("하나",true,3,"넷",5);
+    forExam3("하나",true,3,"넷",5,false);
+    forExam4("하나",true,3,"넷",5,false,"일곱");
+
+  </script>
+</head>
+<body>
+  <h2>다양한 For문 연습</h2>
+</body>
+</html>

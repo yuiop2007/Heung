@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test18.html(오브젝트값 복사)</title>
+  <script>
+    'use strict';
+
+      const user1 = {name:"홍길동", age:20};
+      const user2 = user1;
+      document.write("user1 : " + user1.name + " / " + user1.age + "<br/>");
+      document.write("user2 : " + user2.name + " / " + user2.age + "<br/><br/>");
+      
+      user2.name = "김말숙";
+      document.write("user1 : " + user1.name + " / " + user1.age + "<br/>");
+      document.write("user2 : " + user2.name + " / " + user2.age + "<br/><br/>");
+      
+      const user3 = {};
+      for(let key in user1) {
+        user3[key] = user1[key];
+      }
+      document.write("user3 : " + user3.name + " / " + user3.age + "<br/><br/>");
+      
+      user3.name = "소나무";
+      document.write("user1 : " + user1.name + " / " + user1.age + "<br/>");
+      document.write("user2 : " + user2.name + " / " + user2.age + "<br/>");
+      document.write("user3 : " + user3.name + " / " + user3.age + "<br/><br/>");
+      
+      // 객체복사 메소드를 이용한 복사(assign())
+      const user4 = {};
+      Object.assign(user4, user1);
+      document.write("user1 : " + user1.name + " / " + user1.age + "<br/>");
+      document.write("user2 : " + user2.name + " / " + user2.age + "<br/>");
+      document.write("user3 : " + user3.name + " / " + user3.age + "<br/>");
+      document.write("user4 : " + user4.name + " / " + user4.age + "<br/><br/>");
+      </script>
+</head>
+<body>
+  <h2>오브젝트값 복사하기</h2>
+</body>
+</html>

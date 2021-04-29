@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 그리드</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            background-color: burlywood;
+            height: 100vh; /*flex를 수ㅜ직전체로사용*/
+            display: flex;
+        }
+        .container > div{
+            height: 50px;
+            font-size: 12px;
+        }
+        .menu1{
+            background-color: #ef5350;
+            flex-grow: 1;
+            /* align-self: center;  단독수직정렬 */
+        }
+        .menu2{
+            background-color: #ec407a;
+            width: 500px;
+        }
+        .menu3{
+            background-color: #ab47bc;
+            flex-grow: 1;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class = "menu1">1</div>
+        <div class = "menu2">2</div>
+        <div class = "menu3">3</div>
+        
+    </div>
+</body>
+</html>

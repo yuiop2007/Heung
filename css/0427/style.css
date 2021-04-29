@@ -1,0 +1,94 @@
+body{
+    margin: 0px;
+}
+
+.cont{
+    height: 0vh;
+    display: flex;
+
+}
+.menu{
+    width: 100px;
+    height: 40px;
+}
+
+.menu1{
+    background-color: rgba(235, 149, 149 ,0.7);
+    flex: 1;
+    flex-shrink: 0;
+}
+.menu2{
+    background-color: rgba(235, 149, 149 ,0.7);
+    width: 1180px;
+    text-align: center;
+}
+.menu3{
+    background-color: rgba(235, 149, 149 ,0.7);
+    flex: 1;
+}
+#topNav{
+    display: flex;
+    justify-content: center;
+}
+#topNav b{
+    margin: 0px;
+}
+
+#topNav a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+}
+#topNav a:hover{
+    color: lightcyan;
+    width: 100px;
+}
+#contImg{
+    background-image: url("../../images/flex/1.jpg");
+    width: 100%;
+    height: 500px;
+    background-size: 100% 100%;
+}
+#cont2{
+    width: 1200px;
+    margin: 0 auto;
+}
+.box1{
+    width: 1180px;
+    margin: 50px;
+    text-align: left;
+    float: left;
+}
+.tr1{
+    float: left;
+    width: 782px;
+    height: 332px;
+    margin: 5px 0;
+}
+.tr2{
+    float: left;
+}
+.tr3{
+    float: left;
+}
+.tr4{
+    float: left;
+}
+.tr5{
+    float: left;
+}
+.tr6{
+    float: left;
+}
+.tr7{
+    float: left;
+}
+footer{
+    clear: both;
+    background-color: lightgreen;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}

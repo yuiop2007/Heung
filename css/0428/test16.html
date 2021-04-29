@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fCheck(params) {
+            var su = prompt("숫자 입력 > "); // 입력받는 명령어
+            
+            
+            if(su == ""){
+                alert("수입력");
+                return;
+            }
+            else{
+                alert("입력한수"+su);
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" value="체크" onclick="fCheck()";/>
+    </form>
+</body>
+</html>

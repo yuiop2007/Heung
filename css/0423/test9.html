@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>test9.html</title>
+    <style>
+        /* 색깔지정 color:red; color:#ff0000; color: #f00; */
+        /* color: rgb(255, 0, 0); 빨강색 */
+        /* color: rgba(255, 0, 0, 0.5); 빨강색 + 마지막alpha값은 불투명도 0~1*/
+        /* color: hsl(컬러,%,%) 범위(0~100%)*/
+        /* color: hsla(컬러,%,%,0.5) 범위(0~100%)*/
+        h1{
+            color: rgb(255,0,0);
+
+        }
+        h2{
+            color : rgba(255,0,0,0.5);
+        }
+        #p1{
+            color: hsl(191, 100%, 43%);
+        }
+        #p2{
+            color: hsla(191, 100%, 43%, 0.7);
+        }
+        #p3{
+            font-weight: bold;
+        }
+        #cont{
+            color: rgb(173, 114, 192);
+            line-height: 30pt; /*줄간격*/
+            word-spacing: 50pt; /*단어간격*/
+            letter-spacing: 25px; /*글자간격*/
+        }
+        .mnt, #title1{
+            color :teal;
+        }
+        #title1{
+            font-size: 25px;
+        }
+        #wrap > p{ /* 꺾쇠쓰면자식 안쓰면 자손까지모두 */
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>제목연습1</h2>
+    <h2>제목연습2</h2>
+    <p id="p1">글자연습1</p>
+    <p id="p2">글자연습2</p>
+    <p id="p3">글자연습3</p>
+    <p>글자연습4</p>
+    <p>글자연습5</p>
+    <p>글자연습6</p>
+    <div id="wrap">
+        <p id="title1">
+            애국가
+        </p>
+        <div id="cont">
+            동해물과 <span class="mnt">백두산이</span>동해물과 백두산이동해물과 백두산이동해물과 백두산이
+            동해물과 <span class="mnt">백두산이</span>동해물과 백두산이동해물과 백두산이동해물과 백두산이
+            동해물과 <span class="mnt">백두산이</span>동해물과 백두산이동해물과 백두산이동해물과 백두산이
+            동해물과 백두산이동해물과 백두산이동해물과 백두산이동해물과 백두산이
+            동해물과 백두산이동해물과 백두산이동해물과 백두산이동해물과 백두산이
+            동해물과 백두산이동해물과 백두산이동해물과 백두산이동해물과 백두산이
+            동해물과 백두산이동해물과 백두산이동해물과 백두산이동해물과 백두산이
+            동해물과 백두산이동해물과 백두산이동해물과 백두산이동해물과 백두산이
+            <p>
+                오호
+            </p>
+        </div>
+        <p>1본문의 마지막입니다.</p>
+        <p>2본문의 마지막입니다.</p>
+    </div>
+
+</body>
+</html>

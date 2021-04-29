@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test3.html(계산기구하기)</title>
+  <script>
+    'use strict';
+
+    let su1 = parseInt(prompt("첫번째수를 입력하세요?"));
+    let op = prompt("연산자를 입력하세요?");
+    let su2 = parseInt(prompt("두번째수를 입력하세요?"));
+    let message = calc(su1, op, su2);
+    document.write(su1 + op + su2 + "의 결과?" + message);
+
+    function calc(su1, op, su2) {
+      let message;
+
+      switch(op) {
+        case "+":
+          message = "두수의 합은 " + (su1 + su2) + "입니다.";
+          break;
+        case "-":
+          message = "두수의 차은 " + (su1 - su2) + "입니다.";
+          break;
+        case "*":
+          message = "두수의 곱은 " + (su1 * su2) + "입니다.";
+          break;
+        case "/":
+          message = "두수의 몫은 " + (su1 / su2) + "입니다.";
+          break;
+        case "%":
+          message = "두수의 나머지는 " + (su1 % su2) + "입니다.";
+          break;
+        default:
+          message = "연산자 오류입니다. 다시하세요.";
+      }
+      return message;
+    }
+  </script>
+</head>
+<body>
+  <h2>계산기 프로그램</h2>
+</body>
+</html>

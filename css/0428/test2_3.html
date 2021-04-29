@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0 auto;
+      
+    }
+
+    #topMenu {
+      width: 1000px;
+      height: 50px;
+      margin: 0 auto;
+    }
+    #topMenu ul {
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+    }
+    #topMenu ul li {
+      float: left;
+      background: gray;
+      text-align: center;
+      line-height: 40px;
+      position: relative;
+    }
+
+    /* 서브메뉴*/
+    .subMenu {
+      position: absolute;
+      height: 0px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+    .subMenu li {
+      display: block;
+    }
+    .topMenu:hover .subMenu {
+      height:400px;
+    }
+  </style>
+</head>
+<body>
+  <div id="topMenu">
+    <ul>
+      <li class="topMenu"><a href="test7.html" class="mainMenuLink">홈으로</a></li>
+      <li class="topMenu">
+        <a href="#">상품소개</a>
+        <ul class="subMenu">
+          <li><a href="#">회사내역</a></li>
+          <li><a href="#">대표자인사</a></li>
+          <li><a href="#">회사위치</a></li>
+        </ul>
+      </li>
+      <li class="topMenu">
+        <a href="#">회사소개</a>
+        <ul class="subMenu">
+          <li><a href="#">전자제품</a></li>
+          <li><a href="#">생활용품</a></li>
+          <li><a href="#">주방용품</a></li>
+          <li><a href="#">신발류</a></li>
+        </ul>
+      </li>
+      <li class="topMenu">
+        <a href="#">고객전용</a>
+        <ul class="subMenu">
+          <li><a href="#">고객쉼터</a></li>
+          <li><a href="#">고객의소리</a></li>
+          <li><a href="#">Q & A</a></li>
+        </ul>
+      </li>
+      <li class="topMenu">
+        <a href="#">도움말</a>
+        <ul class="subMenu">
+          <li><a href="#">메뉴1</a></li>
+          <li><a href="#">메뉴2</a></li>
+          <li><a href="#">메뉴3</a></li>
+          <li><a href="#">메뉴4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

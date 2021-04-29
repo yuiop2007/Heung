@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ma{
+            width: 500px;
+            height: 500px;
+            background-color: slateblue;
+            border: 1px solid gray;
+            padding: 50px;
+            position: relative;
+        }
+        #static{
+            position: static;
+            left : 100px;
+        }
+        /* 바로위 부모 기준 부터 */
+        #absolute{
+            position: absolute;
+            left : 100px;
+            color: violet;
+        }
+        /* 부모속성까지 적용하고 */
+        #Relative{
+            position: relative;
+            left : 100px;
+            color: white;
+        }
+        #Fixed{
+            position: fixed;
+            left : 100px;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>static positon</li>
+        <li>absolute positon</li>
+        <li>Relative positon</li>
+        <li>Fixed positon</li>
+    </ol>
+    <div id="ma">
+        <div id ="static">이곳은 static</div>
+        <div id ="absolute">이곳은 absolute</div>
+        <div id ="Relative">이곳은 Relative</div>
+        <div id ="Fixed">이곳은 Fixed</div>
+    </div>
+</body>
+</html>

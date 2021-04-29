@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클래스연습2</title>
+  <script>
+    'use strict';
+  
+    class Member {
+      
+      constructor(firstName, lastName, age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    // getters 생성하기
+    get age(){
+      return this._age;
+    }
+  
+    // setters 생성하기
+    set age(age){
+      this._age = age < 1 ? 1 : age;
+    }
+  }
+  
+  let member = new Member("홍", "길동", -1);
+  document.write(member.firstName+member.lastName+member.age);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

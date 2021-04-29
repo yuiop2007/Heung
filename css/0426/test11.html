@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면 중앙 수평/수직정렬</title>
+</head>
+<style>
+    #content{
+        /* 절대값위치지정 */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border: 1px solid gray;
+        padding: 50px;
+        background-color: skyblue;
+    }
+    .box1{
+        width: 200px;
+        position: absolute;
+        border: 1px solid gray;
+        left: -100px;
+    }
+</style>
+<body>
+    <div id="content">
+        <!-- 문자 수평/수직정렬 -->
+        <div class="box1">
+            문자 수평/수직정렬
+        </div>
+    </div>
+</body>
+</html>

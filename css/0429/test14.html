@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    'use strict';
+  
+  class Shape{
+  
+    constructor(width, height, color){
+      this.width = width;
+      this.height = height;
+      this.color = color;
+    }
+    get color(){
+      return this._color;
+    }
+    set color(color){
+      if(color == "깜정"){
+        this._color = "검정";
+      }
+      else if(color == "하양"){
+        this._color = "흰색";
+      }
+      else {
+        this._color = color;
+      }
+    }
+    // 면적ㅈ 구하는 메소드
+    getArea(){
+      return this.width * this.height;
+    }
+  }
+    class Rectangle extends Shape {}
+  
+    let rec = new Rectangle(10, 20, "하양");
+    document.write(rec.color);
+    document.write(rec.getArea());
+  
+    // 삼각형 객체
+    class Triangle extends Shape {
+      getArea(){
+        return (this.width * this.height)/2;
+      }
+    }
+    let tri = new Triangle(30, 40, "빨강");
+    document.write(tri.getArea());
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

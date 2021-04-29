@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form태그 css</title>
+</head>
+<style>
+    #content, #content2, #content3{
+        width: 400px;
+        float: left;        
+    }
+    #content4{
+        clear: both;
+        width: 500px;
+        padding: 0;
+        margin: 0px;
+    }
+    ul{
+        list-style: none ;
+    }
+
+    fieldset{
+        margin: 20px;
+        padding: 10px;
+    }
+
+    fieldset legend{
+        color: indianred;
+        font-weight: bold;
+        font-size: 15pt;
+    }
+
+    ul li{
+        margin: 20px 0px;
+    }
+    .tit1{
+        width: 70px;
+        float: left;
+    }
+</style>
+<body>
+    <form>
+        <div id = "content">
+            <fieldset> 
+                <legend>개인정보</legend>
+                <ul>
+                    <li>
+                        <label class="tit1" for="mid" >아이디</label>
+                        <input type="text" name="mid" id="mid"/>
+                    </li>
+                    <li>
+                        <label class="tit1" for="pwd" >비밀번호</label>
+                        <input type="password" name="pwd" id="pwd"/>
+                    </li>
+                    <li>
+                        <input type="submit" value="로그인"/>
+                        <input type="reset" value="취소"/>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+        <div id = "content2">
+            <fieldset> 
+                <legend>개인정보2</legend>
+                <ul>
+                    <li>
+                        <label class="tit1" for="mid" >아이디</label>
+                        <input type="text" name="mid" id="mid"/>
+                    </li>
+                    <li>
+                        <label class="tit1" for="pwd" >비밀번호</label>
+                        <input type="password" name="pwd" id="pwd"/>
+                    </li>
+                    <li>
+                        <input type="submit" value="로그인"/>
+                        <input type="reset" value="취소"/>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+        <div id = "content3">
+            <fieldset> 
+                <legend>개인정보3</legend>
+                <ul>
+                    <li>
+                        <label class="tit1" for="mid" >아이디</label>
+                        <input type="text" name="mid" id="mid"/>
+                    </li>
+                    <li>
+                        <label class="tit1" for="pwd" >비밀번호</label>
+                        <input type="password" name="pwd" id="pwd"/>
+                    </li>
+                    <li>
+                        <input type="submit" value="로그인"/>
+                        <input type="reset" value="취소"/>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+        <div id = "content4">
+            <fieldset> 
+                <legend>배송지 정보</legend>
+                <ul>
+                    <li>
+                        <label class="tit1" for="woo" >우편번호</label>
+                        <input type="text" name="woo" id="woo"/>
+                    </li>
+                    <li>
+                        <label class="tit1" for="addr" >주소</label>
+                        <input type="password" name="addr" id="addr"/>
+                    </li>
+                    <li>
+                        <label class="tit1" for="message" >전달사항</label>
+                        <textarea rows="4" cols="40"></textarea>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+    </form>
+</body>
+</html>

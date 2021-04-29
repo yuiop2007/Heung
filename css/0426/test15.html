@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<style>
+    div{
+        margin: 20px;
+    }
+    .a1{
+        /* display: none; */
+    }
+    .b1{
+        display: inline;
+        border: 1px solid gray;
+        /* 단어에 대해서만 해줘서 효과없다 */
+        /* width: 500px;
+        height: 500px; */
+    }
+    .b2{
+        display: block;
+        border: 1px solid gray;
+        width: 100px;
+        height: 100px;
+    }
+    .b3{
+        display: inline-block;
+        border: 1px solid gray;
+        width: 100px;
+        height: 100px;
+
+    }
+</style>
+<body>
+    <h2>display 속성</h2>
+    <pre>
+        -요소들을 어떻게 화면에 보여줄지 결정
+        -속성의 처리값 : visibility(보여주기) / hudden(감추기)
+        -none : 보여주지않음(제거)
+        -inline : 글자(단어)만의 공간을 확보
+        -block : 지정된 블록영역을 확보
+        -inline-block : inline과 block의 합성
+    </pre>
+    <p><br/></p>
+    <div class="a1">안녕</div>
+    <div class="a2">안녕</div>
+    <div class="a3">안녕</div>
+    <div class="a4">안녕</div>
+    <h2>인라인속성</h2>
+    <div class="a5"><span class="b1">김수한무</span> 거북이와 두루미 삼천갑자 동방삭 치치카포 사리사리센타 워리워리 세브리깡 무두셀라 구름이 허리케인에 담벼락 담벼락에 서생원 서생원에 고양이 고양이엔 바둑이 바둑이는 돌돌이</div>
+    <div class="a6"><span class="b2">김수한무</span> 거북이와 두루미 삼천갑자 동방삭 치치카포 사리사리센타 워리워리 세브리깡 무두셀라 구름이 허리케인에 담벼락 담벼락에 서생원 서생원에 고양이 고양이엔 바둑이 바둑이는 돌돌이</div>
+    <div class="a7"><span class="b3">김수한무</span> 거북이와 두루미 삼천갑자 동방삭 치치카포 사리사리센타 워리워리 세브리깡 무두셀라 구름이 허리케인에 담벼락 담벼락에 서생원 서생원에 고양이 고양이엔 바둑이 바둑이는 돌돌이</div>
+    
+</body>
+</html>

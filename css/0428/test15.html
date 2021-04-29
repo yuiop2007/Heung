@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fCheck(params) {
+            var name = prompt("성명 입력 > "); // 입력받는 명령어
+            var yn = confirm("계속할텨?") // 이벤트에 대한 확인,취소버튼
+            alert(name); // 메시지창으로 출력
+            if(yn){
+                alert("계속합니다");
+                return;
+            }
+            else{
+                alert("작업종료");
+                //return false
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" value="체크" onclick="fCheck()";/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    'use strict';
+
+    function calc() {
+      let su1 = parseInt(document.myform.su1.value);
+      let su2 = parseInt(document.myform.su2.value);
+      let op = document.myform.op.value;
+      let message;
+
+      switch(op) {
+        case "+":
+          message = "두수의 합은 " + (su1 + su2) + "입니다.";
+          break;
+        case "-":
+          message = "두수의 차은 " + (su1 - su2) + "입니다.";
+          break;
+        case "*":
+          message = "두수의 곱은 " + (su1 * su2) + "입니다.";
+          break;
+        case "/":
+          message = "두수의 몫은 " + (su1 / su2) + "입니다.";
+          break;
+        case "%":
+          message = "두수의 나머지는 " + (su1 % su2) + "입니다.";
+          break;
+        default:
+          message = "연산자 오류입니다. 다시하세요.";
+      }
+      document.write(message + "<br/>");
+      document.write("<a href='test2.html'>다시시도</a><br/>");
+    }
+  </script>
+</head>
+<body>
+  <h2>계산기 프로그램</h2>
+  <form name="myform">
+    <p>첫번째 수 : <input type="number" name="su1" size="3"/></p>
+    <p>연산자 : <input type="text" name="op" size="3"/>
+      (연산자 : + , - , * , / , %)</p>
+    <p>두번째 수 : <input type="number" name="su2" size="3"/></p>
+    <p><input type="button" value="계산" onclick="calc()"/></p>
+  </form>
+</body>
+</html>

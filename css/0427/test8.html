@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test8.html</title>
+  <style>
+    #btnGroup .btn {
+      background-color: teal;
+      border: none;
+      padding: 10px 30px;
+      margin: 10px;
+      /* border-radius: 10px; */
+      cursor: pointer;
+    }
+    #btnGroup .btn2 {
+      background-color: tomato;
+    }
+    #btnGroup .btn:hover {
+      background-color: violet;
+    }
+    #btnGroup .btn:last-child {
+      background-color: sienna;
+    }
+    #btnGroup .btn:not(:last-child) {
+      color: #fff;
+    }
+    #btnGroup .btn:nth-child(2n) {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h2>버튼 만들기</h2>
+  <div id="btnGroup">
+    <button class="btn btn1">버튼1</button>
+    <button class="btn btn2">버튼2</button>
+    <button class="btn btn3">버튼3</button>
+    <button class="btn btn4">버튼4</button>
+    <button class="btn btn5">버튼5</button>
+  </div>
+</body>
+</html>
