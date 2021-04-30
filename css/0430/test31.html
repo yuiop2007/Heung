@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>숫자체크</title>
+  <!-- 나이는 숫자로만 입력처리하고, 20세 이상만 가입처리 하시오 -->
+  <script>
+    'use strict';
+    function ageCheck() {
+      let str;
+      let age = Number(document.getElementById("age").value);
+      if(isNaN(age) || age == "") {
+        alert("나이는 숫자를 입력하셔야 합니다.");
+        document.getElementById("age").value = "";
+        document.getElementById("age").focus();
+        return false;
+      }
+      else {
+        // if(age >= 20) {
+        //   str = "가입완료!";
+        // }
+        // else {
+        //   str = "미성년자는 가입하실 수 없습니다.!";
+        // }
+        str = (age>=20) ? "가입완료" : "미성년자는 가입하실 수 없습니다.";
+      }
+      document.getElementById("demo").innerHTML = str;
+    }
+  </script>
+</head>
+<body>
+  <h2>숫자 체크</h2>
+  <p>나이를 입력하세요? <input type="text" name="age" id="age"/></p>
+  <p><button type="button" onclick="ageCheck()">나이체크</button></p>
+  <p id="demo"></p>
+</body>
+</html>

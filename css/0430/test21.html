@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열연습2</title>
+  <script>
+    'use strict';
+
+    function check() {
+      // 배열안의 자료를 정렬 : sort()
+      let cars = ["그랜져",300,'에쿠스',350,"K5",250,"모닝",150,"소나타",200];
+      document.write("원본자료")
+      for(let i=0; i<cars.length; i++) {
+        document.write(cars[i] + " / ");
+        if(((i+1) % 2) == 0) document.write("<br/>");
+      }
+      document.write("<hr/>");
+      
+      cars.sort();
+      
+      document.write("정렬자료")
+      for(let car of cars) {
+        document.write(car + "<br/>")
+      }
+      document.write("<hr/>");
+
+      // 역(거꾸로)으로 출력하기
+      cars.reverse();
+      
+      document.write("역으로 출력된 자료")
+      for(let car of cars) {
+        document.write(car + "<br/>")
+      }
+      document.write("<hr/>");
+    }
+  </script>
+</head>
+<body>
+  <input type="button" value="출력" onclick="check()"/>
+</body>
+</html>

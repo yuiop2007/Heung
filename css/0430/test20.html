@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열연습1</title>
+  <script>
+    'use strict';
+
+    // 배열 선언하기
+    const arr1 = new Array();
+    const fruits = ["사과","바나나","배","딸기","레몬"];
+
+    document.write("1. " + fruits + "<br/>");
+    document.write("2. " + fruits.length + "개<br/>")
+    document.write("3. " + fruits[0] + "<br/>");
+    document.write("4. " + fruits[1] + "<br/>");
+    document.write("5. " + fruits[4] + "<br/>");
+    document.write("6. " + fruits[5] + "<br/>");
+    document.write("7. " + fruits[fruits.length - 1] + "<br/><br/>");
+
+    for(let fruit of fruits) {
+      document.write(fruit + "<br/>");
+    }
+    document.write("===================<br/>");
+    
+    fruits.forEach(function(){
+      document.write("값" + "/");
+    });
+    document.write("===================<br/>");
+    
+    fruits.forEach(function(fruit, index, array){
+      document.write(fruit + "<br/>");
+    });
+    document.write("===================<br/>");
+
+    fruits.forEach(function(fruit, index, array){
+      document.write(fruit + "/"+ index + "<br/>");
+    });
+    document.write("===================<br/>");
+    
+    fruits.forEach(function(fruit, index, array){
+      document.write(fruit + "/"+ index + "/" + array + "<br/>");
+    });
+    document.write("********************<br/>");
+    
+    fruits.forEach(function(fruit, index){
+      document.write(fruit + "/"+ index + "<br/>");
+    });
+    document.write("===================<br/>");
+    
+    // 익명함수를 array function으로 변경
+    fruits.forEach((fruit, index) => document.write(fruit + "/"+ index + "<br/>"));
+    document.write("~~~~~~~~~~~~~~~~~~~<br/>");
+    
+    fruits.forEach((fruit) => document.write(fruit + "<br/>"));
+    document.write("--------------------<br/><br/>");
+
+    // 배열 추가(push())  -- 뒤에서부터 추가
+    fruits.push("참외","키위","호박");
+    document.write("1. " + fruits + "<br/>");
+    
+    // 배열 삭제(pop()) - 뒤에서부터 삭제
+    fruits.pop();
+    fruits.pop();
+    document.write("2. " + fruits + "<br/>");
+    
+    // 배열값을 앞에서 추가(unshift())
+    fruits.unshift("수박","오이");
+    document.write("3. " + fruits + "<br/>");
+
+    // 배열값을 앞에서 삭제(shift())
+    fruits.shift();
+    document.write("4. " + fruits + "<br/>");
+    
+    // 지정된 위치에 자료 지우기(splice(지울시작위치)/splice(시작위치,개수))
+    fruits.splice(5);
+    document.write("5. " + fruits + "<br/>");
+    
+    fruits.splice(1,1);
+    document.write("6. " + fruits + "<br/>");
+    
+    fruits.splice(1,0,"옥수수","자몽");  // 인덱스 1번위치에 자료는 지우지 않고 추가한다.
+    document.write("7. " + fruits + "<br/>");
+
+    // 두개의 배열을 묶어서 작업처리(concat())
+    const fruits2 = ["옥수수","수박"];
+    const newFruits = fruits.concat(fruits2);  /* 새로운 배열이 생성된다. */
+    document.write("8. " + newFruits + "<br/>");
+
+    // 배열안의 자료의 검색?(includes():검색결과가 있으면 true/없으면 false, indexOf())
+    document.write("9. " + fruits.includes("옥수수") + "<br/>");
+    document.write("10. " + fruits.includes("옥소수") + "<br/>");
+
+    // 배열안의 자료 검색(indexOf()  :  자료가 없으면 -1이, 있으며 배열요소의 인덱스번지가 전달된다.)
+    document.write("11. " + fruits.indexOf("옥소수") + "<br/>");
+    document.write("12. " + fruits.indexOf("옥수수") + "<br/>");
+    
+    // 뒤에서 부터 검색(lastIndexOf())
+    document.write("13. " + newFruits + "<br/>");
+    document.write("14. " + newFruits.lastIndexOf("옥수수") + "<br/>");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

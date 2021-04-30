@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열연습3</title>
+  <script>
+    'use strict';
+
+    function check() {
+      // 기존자료(입력자료)에 대한 최대/최소값 구하기
+      let maxValue = Math.max(22,16,29,33,24,15);
+      let minValue = Math.min(22,16,29,33,24,15);
+
+      document.write("Max : " + maxValue + "<br/>");
+      document.write("Min : " + minValue + "<br/>");
+      document.write("<hr/>");
+    }
+
+    function check2() {
+      // 배열 안의 자료에 대한 최대최소 구하기(apply()메소드)
+      const arr2 = [22,16,29,33,24,15];
+      let maxValue = Math.max.apply(null, arr2);
+      let minValue = Math.min.apply(null, arr2);
+
+      document.write("Max : " + maxValue + "<br/>");
+      document.write("Min : " + minValue + "<br/>");
+      document.write("<hr/>");
+    }
+
+    function check3() {
+      // 배열 안의 자료에 대한 최대최소 구하기(구분자를 통해서)
+      const arr2 = [22,16,29,33,24,15];
+      let maxValue = Math.max(...arr2);
+      let minValue = Math.min(...arr2);
+
+      document.write("Max : " + maxValue + "<br/>");
+      document.write("Min : " + minValue + "<br/>");
+      document.write("<hr/>");
+    }
+  </script>
+</head>
+<body>
+  <p><input type="button" value="출력" onclick="check()"/></p>
+  <p><input type="button" value="출력2" onclick="check2()"/></p>
+  <p><input type="button" value="출력3" onclick="check3()"/></p>
+</body>
+</html>

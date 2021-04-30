@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상클래스/아이디를 이용한 출력</title>
+  <script>
+    function output() {
+      let item = "문서를 입력합니다.";
+      document.getElementById("demo").innerText = item;
+    }
+
+    function output2() {
+      let item = "<h2>문서를 입력합니다.</h2>";
+      document.getElementById("demo").innerHTML = item;
+    }
+
+    function output3() {
+      let item1 = document.getElementById("demo").innerHTML;
+      item1 += "<h2>추가문서를 입력합니다.</h2>";
+      document.getElementById("demo").innerHTML = item1;
+    }
+
+    function erase() {
+      document.getElementById("demo").innerText = "";
+    }
+  </script>
+</head>
+<p>
+  <p><button type="button" onclick="output()">출력1</button></p>
+  <p><button type="button" onclick="output2()">출력2</button></p>
+  <p><button type="button" onclick="output3()">추가출력</button></p>
+  <p><button type="button" onclick="erase()">지우기</button></p>
+  <p id="demo"></p></body>
+</html>

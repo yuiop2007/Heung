@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수연습</title>
+  <script>
+    'use strict';
+    function result() {
+      //let str = document.getElementById("str").value;
+
+      /* 수치함수 */
+      // round() : 반올림(무조건 정수반올림)
+      document.write(Math.round(4.4) + "<br/>");
+      document.write(Math.round(-4.4) + "<br/>");
+      document.write(Math.round(4.5) + "<br/>");
+      document.write(Math.round(-4.5) + "<br/>");
+      // document.write(Math.round(123.456,1) + "<br/>");
+      // document.write(Math.round(123.456,2) + "<br/>");
+      
+      // toFixed() : 소수점 반올림
+      let str1 = 123.456;
+      document.write(str1.toFixed(0)) + "<br/>";
+      document.write(str1.toFixed(2)) + "<br/>";
+      
+      // floor() : 소수이하 버림
+      document.write(Math.floor(123.4567) + "<br/>");
+      document.write(Math.floor(-123.4567) + "<br/>");
+
+      // ceil() : 소수이하 올림
+      document.write(Math.ceil(123.4567) + "<br/>");
+      document.write(Math.ceil(-123.4567) + "<br/>");
+      
+      // abs() : 절대값
+      document.write(Math.abs(123) + "<br/>");
+      document.write(Math.abs(-123) + "<br/>");
+      
+      // pow() : 지수(거듭제곱)
+      document.write(Math.pow(2, 5) + "<br/>");
+      document.write(Math.pow(2, -2) + "<br/>");
+      
+      // sqrt() : 제곱근
+      document.write(Math.sqrt(16) + "<br/>");
+      
+      // trunc() : 절삭
+      document.write(Math.trunc(123.456) + "<br/>");
+      document.write(Math.trunc(-123.456) + "<br/>");
+      // document.write(Math.trunc(123.456, 1) + "<br/>");
+      
+      // PI : 3.141592....
+      document.write(Math.PI + "<br/>");
+      
+      // cos(), sin()
+      document.write((Math.cos(60*Math.PI/180)) + "<br/>");
+
+      // random() : 0~1사이의 실수형 난수
+      // 1~10사이의 정수형 난수?
+      document.write("1~10사이의 난수? " + (parseInt(Math.random()*10)+1));
+    }
+  </script>
+</head>
+<body>
+  <h2>함수연습</h2>
+  <p>
+    <input type="button" value="결과보기" onclick="result()"/>
+  </p>
+  <p id="demo"></p>
+</body>
+</html>

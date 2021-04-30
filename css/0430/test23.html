@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상클래스/아이디를 이용한 출력</title>
+  <script>
+    'use strict'
+  </script>
+</head>
+<body>
+  <input type="button" value="네이버" onclick="javascript:location.href='https://naver.com';"/>
+  <input type="button" value="변경1" onclick="document.getElementById('demo').style.fontSize='20pt'"/>
+  <input type="button" value="복귀1" onclick="document.getElementById('demo').style.fontSize='12pt'"/>
+  <button type="button" onclick="document.getElementById('demo').style.display='none'">감추기</button>
+  <button type="button" onclick="document.getElementById('demo').style.display='block '">보이기</button>
+  <p id = "demo">가상영역구간</p>
+</body>
+</html>

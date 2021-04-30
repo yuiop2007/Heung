@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수연습</title>
+  <script>
+    'use strict';
+    function result() {
+      let str = document.getElementById("str").value;
+
+      /* 문자(열) 함수 */
+      // indexOf(문자열) : 지정된 문자열 검색하여 있으면 위치값을, 없으면 -1을 반환
+      let str1 = str.indexOf("o");  // 첫번째 'o'의 위치를 반환한다.(시작은 0번부터이다)
+
+      // lastIndexOf(문자열)
+      str1 = str.lastIndexOf('o');
+
+      str1 = str.indexOf("to");
+
+      // charAt(인덱스번호) : 특정 인덱스에 위치한 1개의 문자를 반환한다.
+      str1 = str.charAt(4);
+
+      // match(문자열) : 검색하는 문자(열)이 존재하는지를 검색하여 검색 문자열을 반환한다.
+      str1 = str.match("You");
+
+      // search(문자열) : 지정된 문자열에 특정 문자(열)이 존재하는지를 검색하여 위치값을 반환한다.(없으면 -1)
+      str1 = str.search("My");
+
+      // substr(출력할 시작인덱스, 발췌할 문자수) : 시작인덱스부터 지정한 문자를 반환한다.
+      str1 = str.substr(5,6);
+
+      // substring(출력할 시작인덱스,발췌할마지막문자다음위치) : 2번째인자 앞의 문자까지 반환한다.
+      str1 = str.substring(5,12);
+      str1 = str.substring(12);
+
+      // replace("찾을문자열","치환할문자열")
+      str1 = str.replace("My","You");
+
+      // replaceAll("찾을문자열","치환할문자열")
+      str1 = str.replaceAll("o","u");
+      str1 = str.replaceAll(" ","_");
+
+      // toUpperCase(문자열) : 영문 대문자로 변환
+      str1 = str.toUpperCase();
+
+      // toLowerCase(문자열) : 영문 소문자로 변환
+      str1 = str.toLowerCase();
+
+      // split(특정문자열) : 특정 문자를 기준으로 분리시킨다.(분리시킨후 배열로 저장)
+      str1 = str.split(" ");
+      for(let st of str1) {
+        document.write(st + " / ");
+      }
+
+      document.getElementById("demo").innerHTML = str1;
+    }
+  </script>
+</head>
+<body>
+  <h2>함수연습</h2>
+  <p>
+    문자열 <input type="text" name="str" id="str" size="50" value="Welcome to My Homepage"/>
+    <input type="button" value="결과보기" onclick="result()"/>
+  </p>
+  <p id="demo"></p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼 체크</title>
+  <script>
+    'use strict';
+    function juCheck() {
+      let jumin1 = document.myform.ju1.value;
+      if(jumin1.length == 6) {
+        if(isNaN(jumin1)) {
+          //참(문자)
+          alert("숫자만 입력하세요");
+          document.myform.ju1.focus();
+        }
+        else {
+          // 거짓(숫자)
+          document.myform.ju2.focus();
+        }
+      }
+    }
+
+    function fCheck() {
+      const check = [2,3,4,5,6,7,8,9,2,3,4,5];
+      let jumin = document.myform.ju1.value + document.myform.ju2.value;
+      let gopHap = 0;
+
+      let email = document.getElementById("email").value;
+
+      for(let i=0; i<12; i++) {
+        gopHap += check[i] * jumin.charAt(i);
+      }
+
+      let juminNa = gopHap % 11;
+      let checkDigit = 11 - juminNa;
+
+      if(checkDigit == jumin.substring(jumin.length-1)) {
+        alert("주민번호가 정확합니다.");
+      }
+      else {
+        alert("주민번호 오류입니다....  혹시 간첩??????");
+        return false;
+      }
+      // 이메일 체크
+      if(email.indexOf("@") == -1 || email.indexOf(".") == -1 ||
+        email.indexOf("@.") != -1 || email.indexOf(".@") != -1) {
+        alert("이메일 주소를 확인하세요!");
+        myform.email.focus();
+      }
+      else {
+        alert("정확한 정보가 입력되었습니다.");
+      }
+
+    }
+  </script>
+</head>
+<body>
+  <!-- 아이디와 비밀번호는 20자 이내의 숫자와 알파벳만 가능합니다. -->
+  <form name="myform">
+    <h2>입력양식 체크</h2>
+    <p>아이디 : <input type="text" name="mid" id="mid"/></p>
+    <p>비밀번호 : <input type="password" name="pwd" id="pwd"/></p>
+    <p>주민번호 : 
+      <input type="password" name="ju1" onkeyup="juCheck()" size="6" maxlength="6"/>-
+      <input type="password" name="ju2" size="6" maxlength="7"/>
+    </p>
+    <p>
+      이메일 : <input type="text" name="email" id="email"/>
+    </p>
+    <p>
+      <input type="button" value="폼체크" onclick="fCheck()"/>
+    </p>
+  </form>
+</body>
+</html>
