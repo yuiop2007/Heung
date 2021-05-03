@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test2.html(정규표현식을 이용한 Form체크)</title>
+  <script>
+    function fCheck() {
+      // const regMid = /^[a-zA-Z][a-zA-Z0-9]$/gm;
+      // 아이디 체크
+      const regMid1 = /^[a-zA-Z]/gm;
+      const regMid2 = /[가-힣]/g;
+      const regMid3 = /[\W]/g;
+
+      // 전화번호 체크
+      // const regTel = /\d\d\d-\d\d\d-\d\d\d\d/gm;
+      const regTel = /\d{2,3}[- /.]\d{3,4}[- /.]\d\d\d\d/g;
+
+      // 이메일 체크
+      const regEmail = /[a-zA-Z0-9_+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9.]+/g;
+
+      let mid = document.getElementById("mid").value;
+      let tel = document.getElementById("tel").value;
+      let email = document.getElementById("email").value;
+
+      if(!regMid1.test(mid) || regMid2.test(mid) || regMid3.test(mid)) {
+      // if(!regMid.test(mid)) {
+        alert("아이디형식을 확인하세요");
+        document.getElementById("mid").focus();
+      }
+      else if(!regTel.test(tel)) {
+        alert("전화번호 형식을 확인하세요");
+        document.getElementById("tel").focus();
+      }
+      else if(!regEmail.test(email)) {
+        alert("이메일 형식을 확인하세요");
+        document.getElementById("email").focus();
+      }
+      else {
+        alert("정상적으로 입력처리 되었습니다.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>정규표현식을 이용한 Form체크</h2>
+  <form name="myform">
+    <p>
+      아이디 : <input type="text" name="mid" id="mid"/><br/>
+      (아이디는 영문자와 숫자만 가능, 첫글자는 영문자로 시작해야함);
+    </p>
+    <p>
+      전화번호 : <input type="text" name="tel" id="tel"/><br/>
+      (전화번호형식 : 010 123 4567, 010-123-4567, 010-1234-5678, 지역번호 2자리허용)
+    </p>
+    <p>
+      이메일 : <input type="text" name="email" id="email"/><br/>
+      (이메일형식 : abc@abc.com)
+    </p>
+    <p>
+      <input type="button" value="폼체크" onclick="fCheck()"/>
+    </p>
+  </form>
+</body>
+</html>

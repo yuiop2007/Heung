@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리스트박스연습(test8.html)</title>
+  <script>
+    function fCheck() {
+      var fruit = myform.fruit.value;
+      if(fruit == "") {
+        alert("과일을 선택하세요");
+      }
+      else {
+        var str = "";
+        for(var i=0; i<myform.fruit.length; i++) {
+          // if(myform.fruit.options[i].selected) {
+          if(myform.fruit[i].selected) {
+            // str += myform.fruit.options[i].value + " / ";
+            str += myform.fruit[i].value + " / ";
+          }
+        }
+        document.getElementById("demo").innerHTML = "선택하신 과일은? <font color='red'>" + str + "</font>";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>리스트박스 연습</h2>
+  <p>
+    좋아하는 과일을 선택하세요
+    <form name="myform">
+      <select name="fruit" size="5" multiple>
+        <option value="사과">사과</option>
+        <option value="바나나">바나나</option>
+        <option value="포도">포도</option>
+        <option value="수박">수박</option>
+        <option value="딸기">딸기</option>
+        <option value="참외">참외</option>
+        <option value="키위">키위</option>
+        <option value="복숭아">복숭아</option>
+      </select>
+      <input type="button" value="확인" onclick="fCheck()"/>
+      <input type="reset" value="취소"/>
+      <!-- 아래버튼은 test9.html에서 호출했을경우.... -->
+      <input type="button" value="돌아가기" onclick="history.back()"/>
+    </form>
+  </p>
+  <p id="demo"></p>
+</body>
+</html>

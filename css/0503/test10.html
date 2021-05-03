@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setInterval()</title>
+  <script>
+    let addNum = 0;
+
+    function numStart(sel) {
+      if(sel == "start") {
+        addNum++;
+        //setInterval(1000);
+        document.getElementById('demo').innerHTML = addNum;
+        timeCheck = setTimeout("numStart('start')", 1000);
+      }
+      else {
+        clearTimeout(timeCheck);
+      }
+    }
+
+    /*
+    function numStop() {
+      clearTimeout();
+    }
+    */
+  </script>
+</head>
+<body>
+  <h2>setInterval()메소드</h2>
+  <p>
+    <input type="button" value="증가" onclick="numStart('start')"/>
+    <input type="button" value="정지" onclick="numStart('stop')"/>
+  </p>
+  <p>
+    <p id="demo"></p>
+  </p>
+</body>
+</html>

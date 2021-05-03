@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>location객체</title>
+  <script>
+    function myFunc() {
+      var goUrl = myform.goUrl.value;
+      if(goUrl == "") {
+        alert("이동할 주소를 선택하세요?");
+      }
+      else {
+        alert("선택하신 목적지는? " + goUrl);
+        location.href = goUrl;
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <h2>어디로 갈까요?</h2>
+    <p>
+      <select name="goUrl" onchange="myFunc()">
+        <option value="">선택하세요</option>
+        <option value="http://www.naver.com">네이버</option>
+        <option value="http://www.daum.net">다음</option>
+        <option value="../../images/9.jpg">이미지</option>
+        <option value="test8.html">test8.html</option>
+        <option value="">연습</option>
+      </select>
+    </p>
+    <p>
+      <input type="reset" value="취소"/>
+      <input type="button" value="다시읽어오기" onclick="location.reload();"/>
+    </p>
+  </form>
+</body>
+</html>

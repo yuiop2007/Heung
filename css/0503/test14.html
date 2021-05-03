@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>새창띄우기(부모창)</title>
+  <script>
+    function newWin() {
+      var url = "test14_2.html";
+      window.open(url, "nWin", "width=500px, height=400px, left=300px, top=200px");
+    }
+  </script>
+</head>
+<body>
+  <h2>새창띄우기(부모창)</h2>
+  <p>
+    <input type="button" value="새창" onclick="newWin()"/>
+  </p>
+</body>
+</html>

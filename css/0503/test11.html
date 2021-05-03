@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인터넷시계</title>
+  <script>
+    var timeCheck = "";
+    function myFunc(sel) {
+      var today = new Date();
+      var str = "";
+
+      if(sel == "start") {
+        str += today.getHours() + "시 ";
+        str += today.getMinutes() + "분 ";
+        str += today.getSeconds() + "초";
+        document.getElementById("demo").innerHTML = str;
+        timeCheck = window.setTimeout("myFunc('start')", 1000)
+      }
+      else {
+        clearTimeout(timeCheck);
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>인터넷시계</h2>
+  <p>
+    <input type="button" value="시계동작" onclick="myFunc('start')"/>
+    <input type="button" value="시계정지" onclick="myFunc('stop')"/>
+  </p>
+  <p id="demo"></p>
+</body>
+</html>
