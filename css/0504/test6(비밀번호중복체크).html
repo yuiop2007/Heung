@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비밀번호중복체크</title>
+  <script>
+    function pwdCheck() {
+      var pwd1 = document.myform.pwd1.value;
+      var pwd2 = document.myform.pwd2.value;
+
+      if(pwd1 != pwd2) {
+        alert("비밀번호가 다릅니다.");
+        document.myform.pwd2.focus();
+        document.myform.pwd2.select();
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <h2>비밀번호 중복체크</h2>
+    <p>아이디 <input type="text" name="mid"/></p>
+    <p>비밀번호 <input type="password" name="pwd1"/></p>
+    <p>비밀번호 확인 <input type="password" name="pwd2" onchange="pwdCheck()"/></p>
+    <p><input type="button" value="전송"/></p>
+  </form>
+</body>
+</html>

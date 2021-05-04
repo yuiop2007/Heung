@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전화번호 출력</title>
+  <script>
+    function telCheck() {
+      let tel1 = document.myform.tel1.value;
+      let tel2 = document.myform.tel2.value;
+      let tel3 = document.myform.tel3.value;
+
+
+      const regTel2 = /\d{3,4}/g;
+      const regTel3 = /\d{4}/g;
+
+      if(!regTel2.test(tel2)) {
+        alert("전화번호 형식을 확인하세요");
+        document.myform.tel2.value = "";
+        document.myform.tel2.focus();
+      }
+      else if(!regTel3.test(tel3)){
+        alert("전화번호 형식을 확인하세요");
+        document.myform.tel3.value = "";
+        document.myform.tel3.focus();
+      }
+      else if(tel1 == ""){
+        alert("선택을 해주세요.")
+      }
+      else{
+        document.getElementById("demo").innerHTML = tel1 + "-" + tel2 + "-" + tel3;
+
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <h2>전화번호를 입력하신후 출력버튼을 누르세요.</h2>
+    <p>전화번호 :
+      <select name="tel1">
+        <option value="">선택</option>
+        <option value="010">010</option>
+        <option value="02">서울</option>
+        <option value="031">경기도</option>
+        <option value="032">인천</option>
+        <option value="041">천안</option>
+        <option value="042">대전</option>
+        <option value="043">청주</option>
+        <option value="051">강원도</option>
+      </select>-
+      <input type="text" name="tel2" size="4" maxlength="4"/>
+      <input type="text" name="tel3" size="4" maxlength="4"/>
+    </p>
+    <p>
+      <input type="button" value="출력" onclick="telCheck()"/>
+    </p>
+  </form>
+  <p id="demo"></p>
+</body>
+</html>

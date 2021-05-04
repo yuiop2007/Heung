@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼제어하기</title>
+  <script>
+    function addAddress(frm) {
+      // 현재 항복의 전체 갯수를 구해온다.(개수 위치가 추가될 위치이다.)
+      var optIndex = myform.imsiList.length;
+
+      // 새로 입력한 내용을 가져온다.
+      var optText = frm.address.value;
+
+      // 새로운 내용을 입력처리하기 위해선 객체로 생성시켜줘야 한다.
+      var opt = new Option(optText);
+
+      // 해당 인덱스 위치에 새로운 항목을 추가시킨다.
+      frm.imsiList.options[optIndex] = opt;
+    }
+
+    // 항목 삭제 함수
+    function delAddress(frm) {
+      for(var i=0; frm.imsiList.length; i++) {
+        if(frm.imsiList.options[i].selected) frm.imsiList.options[i] = null;
+      }
+    }
+
+    // 선택항목 수정하기
+    function updAddress(frm) {
+      var str = frm.modifyAddress.value;
+
+      for(var i=0; i<frm.imsiList.length; i++) {
+        if(frm.imsiList.options[i].selected) frm.imsiList.options[i].text = str;
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <h2>폼 제어하기</h2>
+    <p>
+      <select name="imsiList" size="5" multiple>
+      </select>
+    </p>
+    <p>
+      <input type="text" name="address"/>
+      <input type="button" value="항목추가" onclick="addAddress(this.form)"/>
+      <input type="button" value="항목삭제" onclick="delAddress(this.form)"/>
+    </p>
+    <p>
+      <input type="text" name="modifyAddress" />
+      <input type="button" value="항목수정" onclick="updAddress(this.form)"/>
+    </p>
+
+    <p><input type="reset" value="clear"/></p>
+</form>
+</body>
+</html>

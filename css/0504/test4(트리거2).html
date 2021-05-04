@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트리거</title>
+  <script>
+    var num1 = 0;
+    var num2 = 0;
+
+    function click1() {
+      document.getElementById("demo1").innerHTML = ++num1;
+    }
+    function click2() {
+      document.getElementById("demo2").innerHTML = ++num2;
+      document.getElementById("btn1").click();
+    }
+  </script>
+</head>
+<body>
+  <h2>트리거 사용예2</h2>
+  <form name="myform">
+    <p>
+      <input type="button" name="btn1" id="btn1" value="버튼1" onClick="click1();"/>
+      <input type="button" name="btn2" id="btn2" value="버튼2" onclick="click2();"/>
+    </p>
+  </form>
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+</body>
+</html>
