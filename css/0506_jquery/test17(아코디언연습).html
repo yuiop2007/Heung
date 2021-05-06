@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아코디언메뉴연습</title>
+  <script type="text/javascript" src="js/jQuery.js"></script>
+  <script>
+    $(document).ready(function() {
+      // $('div.content')
+      $('#accordion > .content').hide();
+
+      // $('#accordion > .header').mousemove(function() {  // 불안정하다.
+      $('#accordion > .header').click(function() {
+        // $(this).next().show();
+        //$(this).next().toggle(400);
+        $(this).next().slideToggle(400);
+      });
+    });
+  </script>
+  <style>
+    div#accordion {
+      width:400px;
+      text-align: center;
+      padding: 3px;
+    }
+    div.header {
+      border:1px solid #ddd;
+      background-color: purple
+    }
+    div.content {
+      border:1px solid #ddd;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div id="accordion">
+    <h3 style="display:none;">아코디언 UI</h3>
+    <h3 style="display:block">아코디언 UI</h3>
+
+    <div class="header">제목1</div>
+    <div class="content">내용1</div>
+
+    <div class="header">제목2</div>
+    <div class="content">내용2</div>
+
+    <div class="header">제목3</div>
+    <div class="content">내용3</div>
+
+    <div class="header">제목4</div>
+    <div class="content">내용4</div>
+
+    <div class="body-content">
+      아코디언 UI는 메뉴가 위아래로 이동하는 UI입니다.<br/>
+      만들어 봅시다.
+    </div>
+  </div>
+</body>
+</html>

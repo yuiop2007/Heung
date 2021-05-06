@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onLoad 이벤트</title>
+  <script>
+    /*
+    function pCheck() {
+      var name = myform.product.value;
+      var cost = Number(myform.cost.value);
+      var qty = Number(myform.qty.value);
+
+      if(isNaN(cost) || isNaN(qty)) {
+        alert("단가와 수량은 숫자로 입력하세요");
+        myform.cost.focus();
+      }
+      else {
+        var res = cost * qty;
+        document.getElementById("total").innerHTML = res;
+      }
+    }
+    */
+    
+    window.onload = function() {
+      var name = document.getElementById("product");
+      var cost = document.getElementById("cost");
+      var qty = document.getElementById("qty");
+      var totalBtn = document.getElementById("totalBtn");
+
+      totalBtn.addEventListener('click', function() {
+        var x = Number(cost.value);
+        var y = Number(qty.value);
+
+        if(isNaN(x) || isNaN(y)) {
+          alert("단가와 수량은 숫자로 입력하세요");
+          myform.cost.focus();
+        }
+        else {
+          var res = x * y;
+          document.getElementById("total").innerHTML = res;
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <h2>제품판매 내역서</h2>
+    <p>
+      품명 : <input type="text" name="product" id="product" autofocus/>
+    </p>
+    <p>
+      단가 : <input type="text" name="cost" id="cost"/>
+    </p>
+    <p>
+      수량 : <input type="text" name="qty" id="qty"/>
+    </p>
+    <p>
+      금액 : <span id="total"></span>
+    </p>
+    <p>
+      <button type="button" id="totalBtn">계산</button>
+    </p>
+</form>
+</body>
+</html>

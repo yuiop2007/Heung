@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼태그안에 접근을 위한 방법</title>
+  <script type="text/javascript" src="js/jQuery.js"></script>
+  <script>
+    $(document).ready(function() {
+      // 속성은 대괄호(태그명[속성명=값])의 형태로 지정한다.
+      $('input[type="text"]').css('border', '1px solid orange');
+      $('input[type="number"]').css('border', '1px solid red');
+      $('input[type="password"]').css('border', '1px solid blue');
+
+      // 태그명을 지정하지 않으면 속성명과 일치하는 모든것에 적용시킨다.
+      $('[readonly]').css('color', 'green');   // readonly 속성을 가진 요수에 대하여 글자색을 green으로 설정하시오.
+      $('[name="age"]').css('color', 'orange');
+
+      $('a[href = "https://www.naver.com"]').css('color', 'brown');
+      // 위까지는 완벽일치
+
+      // 시작문자열 일치(^)
+      $('a[href ^= "http"]').css('color', 'red');
+
+      // 마지막문자열 일치($)
+      $('a[href $= ".net"]').css('color', 'yellow');
+
+      // 포함유무(*)
+      $('input[value *= "길"]').css('backgroundColor', 'lightgray');
+      $('img[src *= "8"]').css('border', '5px solid orange');
+
+      // not(!)
+      $('input[type != "text"]').css('backgroundColor', 'skyblue');
+    });
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <h2>폼태그 속성 제어하기</h2>
+    <p>성명 : <input type="text" name="name" id="name" value="홍길동" readonly/></p>
+    <p>나이 : <input type="number" name="age" id="age" value="20"/></p>
+    <p>근무년수 : <input type="number" name="yy" id="yy" value="5"/></p>
+    <p>비밀번호 : <input type="password" name="pwd" id="pwd"/></p>
+    <hr/>
+    <p><a href="http://www.naver.com">네이버1</a></p>
+    <p><a href="http://www.daum.net">다음</a></p>
+    <p><a href="https://www.naver.com">네이버2</a></p>
+    <p>
+      <img src="../../images/9.jpg" width="100px"/>
+      <img src="../../images/8.jpg" width="100px"/>
+      <img src="../../images/7.jpg" width="100px"/>
+    </p>
+  </form>
+</body>
+</html>

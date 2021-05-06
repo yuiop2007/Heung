@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자 종류</title>
+  <script type="text/javascript" src="js/jQuery.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('*').css('color','lightgray');    // 전체선택자
+      $('p').css('color','blue');         // 태그 선택자
+      $('.atom').css('color', 'red');     // 클래스 선택자
+      $('#demo').text('이곳은 demo영역 입니다.'); // 아이디 선택자
+      $('#demo').text('이곳은 demo영역 입니다.').css('color','yellow'); // 텍스트에 스타일 지정하기
+      $('#demo').text('이곳은 demo영역 입니다.').css('color','yellow').css('fontSize','25pt'); // 텍스트에 스타일 지정하기
+      $('#demo').text('이곳은 demo영역 입니다.').css({
+        'color':'yellow',
+        'font-size':'15pt',
+        //'text-decoration':'underline'
+        'textDecoration':'underline'
+      }); // 텍스트에 연속된 스타일 지정하기
+    });
+  </script>
+</head>
+<body>
+  <h2>선택자의 종류...</h2>
+  <h2>안녕하세요</h2>
+  <p>반갑습니다.</p>
+  <div class="atom">jQuery연습입니다.</div>
+  <div id="demo"></div>
+</body>
+</html>

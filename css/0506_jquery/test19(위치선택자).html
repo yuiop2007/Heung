@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>위치선택자</title>
+  <script type="text/javascript" src="js/jQuery.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#foods > tbody > tr').css('backgroundColor', 'lightgray');
+      $('#foods tr:odd').css('backgroundColor','pink');
+      // $('#foods tr:even').css('backgroundColor','skyblue');
+      $('#foods tr:first').css({
+        'backgroundColor':'green',
+        'color': '#fff'
+      });
+      $('#foods tr:last').css({
+        'backgroundColor':'brown',
+        'color': '#fff'
+      });
+      $('#foods tr:eq(2)').css({
+        'backgroundColor':'orange',
+        'color': '#fff'
+      });
+
+      $('#two tr:gt(3)').css('backgroundColor', 'gray');
+      $('#two tr:lt(3)').css('backgroundColor', 'lightgray');
+      $('#two tr:eq(3)').css('backgroundColor', 'orange');
+    });
+  </script>
+  <style>
+    table, th, td {
+      border: 1px solid gray;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    /* th {
+      background-color: #ccc;
+    } */
+    th, td {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>먹고 싶은 과일은?</h2>
+  <table class="table" id="foods">
+    <tr>
+      <th>번호</th>
+      <th>명칭</th>
+      <th>분류</th>
+    </tr>
+    <tr>
+      <td>A01</td>
+      <td>짜장면</td>
+      <td>중식</td>
+    </tr>
+    <tr>
+      <td>A02</td>
+      <td>라면</td>
+      <td>분식</td>
+    </tr>
+    <tr>
+      <td>B01</td>
+      <td>돈까스</td>
+      <td>양식</td>
+    </tr>
+    <tr>
+      <td>B02</td>
+      <td>초밥</td>
+      <td>일식</td>
+    </tr>
+    <tr>
+      <td>B03</td>
+      <td>오므라이스</td>
+      <td>양식</td>
+    </tr>
+    <tr>
+      <td>B04</td>
+      <td>스테이크</td>
+      <td>양식</td>
+    </tr>
+  </table>
+  <hr/><br/>
+  <h2>먹고 싶은 과일은222?</h2>
+  <table class="table" id="two">
+    <tr>
+      <th>번호</th>
+      <th>명칭</th>
+      <th>분류</th>
+    </tr>
+    <tr>
+      <td>A01</td>
+      <td>짜장면</td>
+      <td>중식</td>
+    </tr>
+    <tr>
+      <td>A02</td>
+      <td>라면</td>
+      <td>분식</td>
+    </tr>
+    <tr>
+      <td>B01</td>
+      <td>돈까스</td>
+      <td>양식</td>
+    </tr>
+    <tr>
+      <td>B02</td>
+      <td>초밥</td>
+      <td>일식</td>
+    </tr>
+    <tr>
+      <td>B03</td>
+      <td>오므라이스</td>
+      <td>양식</td>
+    </tr>
+    <tr>
+      <td>B04</td>
+      <td>스테이크</td>
+      <td>양식</td>
+    </tr>
+  </table>
+</body>
+</html>
