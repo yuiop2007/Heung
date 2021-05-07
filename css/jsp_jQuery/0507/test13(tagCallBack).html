@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test13(tagCallBack)</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  	$(document).ready(function() {
+  		$('.container input').each(function(index, item) {
+  			$(item).click(function() {
+	  			console.log((index + 1) , '번째 출력');
+	  			alert((index+1) + "번째 출력");
+  			});
+  		});
+  	});
+  </script>
+</head>
+<body>
+	<div class="container">
+		<input type="button" value="첫번째"/>
+		<input type="button" value="두번째"/>
+		<input type="button" value="세번째"/>
+	</div>
+</body>
+</html>

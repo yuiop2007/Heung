@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>콤보박스 연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    	$('#content input[name="search"]').click(function() {
+		    // form태그에 한개의 값만을 가져올때는 .val() 을 사용한다.
+		    // form태그에 여러개의 값을 가져올때는 배열처리
+		    var foods = [];
+		    /* 
+		    $('#content select[name="food"] > option:selected').each(function(index, item) {
+		    	foods.push($(item).val());
+		    });
+		     */
+		    $('#content select[name="food"] > option:selected').each((index, item) => foods.push($(item).val()));
+		    alert("선택하신 음식분류는? " + foods);
+    	});
+    });
+  </script>
+</head>
+<body>
+	<h2>음식의 분류를 선택하세요</h2>
+	<div id="content">
+	  <select name="food" size="5" multiple>
+	    <option value="한식">한식</option>
+	    <option value="양식">양식</option>
+	    <option value="중식">중식</option>
+	    <option value="일식">일식</option>
+	    <option value="분식">분식</option>
+	    <option value="터키식">터키식</option>
+	    <option value="러시아식">러시아식</option>
+	  </select>
+	  
+	  <span>
+	  	<input type="button" value="조회" name="search" onclick="search()"/>
+	  </span>
+	</div>
+</body>
+</html>

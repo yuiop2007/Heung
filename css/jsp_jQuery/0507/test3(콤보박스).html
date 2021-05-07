@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>콤보박스 연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    /* 
+  	$(document).ready(function() {
+  		$('#content input[name="search"]').click(function() {
+  			var food = $('#content select[name="food"] > option:selected').val();
+  			
+  			alert('선택하신 음식의 분류는? ' + food);
+  		});
+  	});
+  	 */
+  	$(document).ready(function() {
+  		$('#content select[name="food"]').change(function() {
+				var food = $('#content select[name="food"] > option:selected').val();
+  			if(food == "") {
+  				alert("음식분류를 선택하세요");
+  			}
+  			else {
+  				alert('선택하신 음식의 분류는? ' + food);
+  			}
+  		});
+  	});
+  </script>
+</head>
+<body>
+	<h2>음식의 분류를 선택하세요</h2>
+	<div id="content">
+	  <select name="food">
+	    <option value="">음식의 분류를 선택하세요</option>
+	    <option value="한식">한식</option>
+	    <option value="양식">양식</option>
+	    <option value="중식">중식</option>
+	    <option value="일식">일식</option>
+	    <option value="분식">분식</option>
+	  </select>
+	  
+	  <span>
+	  	<!-- <input type="button" value="조회" onclick="search()"/> -->
+	  	<input type="button" value="조회" name="search"/>
+	  </span>
+	</div>
+</body>
+</html>

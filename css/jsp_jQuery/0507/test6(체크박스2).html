@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>체크박스 연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    	$('#content button[name="hobbyBtn"]').click(function() {
+    		//var ck = $('#content input[name="hobby"]:checked');
+    		//console.log(ck);
+    		/*
+    		var hobbyAry = [];
+    		$('#content input[name="hobby"]:checked').each(function(index, item) {
+    			hobbyAry.push($(item).val());
+    		});
+    		*/
+    		
+    		var hobbyAry = $('#content input[name="hobby"]:checked').map(function(index, item) {
+    			return $(item).val();
+    		})
+    		.get()
+    		.join('/');
+    		console.log(hobbyAry);
+    		
+    		alert("선택된 취미는? " + hobbyAry);
+    		
+    		/* $('span[title="hobbyPrn"]').html('<font color="red"><b>'+hobbyAry+'</b></font>'); */
+    		$('#prn').html('<font color="red"><b><u>'+hobbyAry+'</u></b></font>');
+    	});
+    });
+  </script>
+</head>
+<body>
+	<h2>체크박스 연습</h2>
+	<p>
+	  출력 : (<span id="prn" title="hobbyPrn"></span>)
+	</p>
+	<form name="myform">
+	  <div id="content">
+	  	<div>
+	  	  취미 : 
+	  	  <input type="checkbox" name="hobby" value="독서"/>독서 &nbsp;
+	  	  <input type="checkbox" name="hobby" value="등산"/>등산 &nbsp;
+	  	  <input type="checkbox" name="hobby" value="낚시"/>낚시 &nbsp;
+	  	  <input type="checkbox" name="hobby" value="바둑"/>바둑 &nbsp;
+	  	  <input type="checkbox" name="hobby" value="영화감상"/>영화감상 &nbsp;
+	  	  <input type="checkbox" name="hobby" value="서예"/>서예
+	  	</div>
+	  	<div>
+	  	  <button type="button" name="hobbyBtn">출력</button>
+	  	</div>
+	  </div>
+	</form>
+</body>
+</html>

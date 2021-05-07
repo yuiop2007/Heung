@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test1.html(라디오버튼)</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  	function check() {
+  		/*
+  		var fruit = document.getElementsByName("fruit");
+  		
+  		for(var i=0; i<fruit.length; i++) {
+  			if(fruit[i].checked) {
+  				alert("선택된 과일은? " + fruit[i].value);
+  			}
+  		}
+  		*/
+  		var fruit = document.myform.fruit;
+  		
+  		for(var i=0; i<fruit.length; i++) {
+  			if(fruit[i].checked) {
+  				alert("선택된 과일은? " + fruit[i].value);
+  			}
+  		}
+  	}
+  	
+  	function check2() {
+  		var fruit = myform.fruit.value;
+  		if(fruit == "") {
+	  		alert("과일을 선택하세요");
+  			return false;
+  		}
+  		else {
+	  		alert("선택하신 과일은? " + fruit);
+  		}
+  	}
+  </script>
+</head>
+<body>
+	<h2>라디오버튼 연습</h2>
+	<form name="myform">
+	  <h2>좋아하는 과일을 선택하세요</h2>
+	  <p>
+	  	<input type="radio" name="fruit" value="사과"/>사과
+	  	<input type="radio" name="fruit" value="바나나"/>바나나
+	  	<input type="radio" name="fruit" value="딸기"/>딸기
+	  	<input type="radio" name="fruit" value="수박"/>수박
+	  	<input type="radio" name="fruit" value="망고"/>망고
+	  </p>
+	  <p>
+	    <button type="button" onclick="check()">선택</button>
+	    <button type="button" onclick="check2()">선택2</button>
+	  </p>
+	</form>
+</body>
+</html>
