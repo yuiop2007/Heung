@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test1(attr).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  	$(document).ready(function(){
+  		$('#btn').click(function() {
+  			/* $('#txt').attr('value','홍길동'); */
+  			$('#txt').prop('value','김말숙');
+  			
+  			/* console.log($('#txt').attr('value')); */
+  			console.log($('#txt').prop('value'));
+  		});
+  	});
+  </script>
+</head>
+<body>
+	<h2>속성제어(attr)</h2>
+	<div id="content">
+		<p>
+		  <input type="text" name="txt" id="txt"/>
+		  <button id="btn">Button</button>
+		</p>
+	</div>
+</body>
+</html>

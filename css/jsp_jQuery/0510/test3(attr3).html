@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test3(attr3).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+	  	var sales = [
+	  		{amount:1000000, discount:0.1},
+	  		{amount:1500000, discount:0.15},
+	  		{amount:1200000, discount:0.12},
+	  		{amount:2000000, discount:0.2}
+	  	];
+    	
+	  	// 버튼을 클릭하면 값을 재계산(기존값에  할인된 가격의 값을 추가 누적처리하자.)
+	  	$('#recalc').click(function(){
+	  		$('#sales input[type="text"]').attr('value', function(index, item){
+	  			var price = sales[index].amount * sales[index].discount;
+	  			return Number(item) + price;
+	  		});
+	  	});
+    });
+  </script>
+</head>
+<body>
+	<h2>할인률 계산</h2>
+	<div id="sales">
+		<p>아이패드 : <input type="text" id="a" value="1000000"/></p>
+		<p>갤럭시탭 : <input type="text" id="b" value="1500000"/></p>
+		<p>맥북 : <input type="text" id="c" value="1200000"/></p>
+		<p>노트북 : <input type="text" id="d" value="2000000"/></p>
+		<p>
+		  <input type="button" id="recalc" value="재계산"/>
+		  <!-- <input type="reset" value="취소"/> -->
+		  <input type="button" value="다시하기" onclick="location.reload()"/>
+		</p>
+	</div>
+</body>
+</html>

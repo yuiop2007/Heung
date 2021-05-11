@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test16(동적행추가).html</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<style>
+		th  { background-color:purple; color:yellow; }
+		.pkey { width:250px; }
+		.pname  { width:150px; }
+		.ptel  { width:150px; }
+		.pdel  { width:100px; }
+	</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  	// 고유ID 생성
+  	function generateId() {
+  		var id = Math.ceil((Math.random() * 10000));
+  		return id;
+  	}
+  
+  	// 행 추가...
+    $(document).ready(function(){
+    	// DOM객체를 복사 : clone() - DOM자체만 복사, clone(true) - DOM과 이벤트까지 복사
+    	// 행추가 버튼을 누르면?.
+    	$('#content button[name="add"]').click(function(){
+    		$('#temprow').clone(true)
+    			.find('input[name="key"]').val(generateId())
+    			.closest('tr')
+    			.appendTo($('#rowbody'))
+    	});
+    
+    	// 행 삭제...
+    	$('#temprow input[type="button"]').click(function(){
+    		$(this).closest('tr').remove();
+    	});
+    });
+  </script>
+</head>
+<body>
+	<div class="card-body" id="content">
+		<h2>추가할 데이터</h2>
+		<button name="add" class="pno"> 행 추가 </button>
+		<button name="saveall">모두 저장</button>
+		<div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th class="pkey">식별번호</th>
+						<th class="pname">이름</th>
+						<th class="ptel">전화번호</th>
+						<th class="pdel">삭제버튼</th>
+					</tr>
+				</thead>
+				<tbody id="rowbody">
+	
+				</tbody>
+			</table>
+			<br />
+			
+		</div>
+	</div>
+
+	<table style="display:none">
+		<tr id="temprow">
+			<td><input type="text" class="pkey" name="key" disabled /></td>
+			<td><input type="text" class="pname" name="name" /></td>
+			<td><input type="text" class="ptel" name="tel" /></td>
+			<td><input type="button" class="pdel" value="삭제" /></td>
+		</tr>
+	</table>
+
+</body>
+</html>

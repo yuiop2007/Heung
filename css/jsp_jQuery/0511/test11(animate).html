@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test11(animate).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+  	body{
+  		margin: 0px;
+  	}
+  	#item {
+  		width: 150px;
+  		height: 150px;
+  		background-color: pink;
+  		position: absolute;
+  	}
+  </style>
+  <script>
+  	$(document).ready(function(){
+  		$('#btn1').on('click', function(){
+  			$('#item').animate({
+  				left: "300px",
+  				width: "50px",
+  				height: "50px",
+  				opacity: "0"
+  			}, "fast");
+  		});
+  		
+  		$('#btn2').on('click', function(){
+  			$('#item').animate({
+  				left: "0px",
+  				width: "150px",
+  				height: "150px",
+  				opacity: "1"
+  			});
+  		});
+  		
+  		$('#btn3').click(function(){
+  			$('#item').animate({
+  				left: "+=50px"
+  			}, "fast");
+  		});
+  	});
+  </script>
+</head>
+<body>
+	<h2>이곳은 본문입니다.</h2>
+	<p>
+		<input type="button" id="btn1" value="이동"/>
+		<input type="button" id="btn2" value="원위치"/>
+		<input type="button" id="btn3" value="50px씩 오른쪽 이동"/>
+	</p>
+	<div id="item">이동창</div>
+</body>
+</html>

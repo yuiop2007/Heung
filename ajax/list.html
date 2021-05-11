@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연락처 리스트</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      /*
+      $.get('http://localhost:3000/contacts', function(data) {
+        console.log(data);
+      });
+      */
+      /*
+      $.get('http://localhost:3000/contacts')
+        .done(function(data){
+          console.log(data);
+        })
+        .fail(function(error){
+          console.log(error);
+        });
+      */
+
+      $.ajax({
+        method: 'GET',
+        url: 'http://localhost:3000/contacts',
+        data:{
+          pageno: 2,
+          pagesize: 15
+        },
+        success: function(data) {
+          console.log(data);
+          // JSON형식으로 넘어온 경우는 JavaScript형식으로 파싱처리해서 사용해야 한다.(JSON.parse())
+          // var jsData = JSON.parse(data);
+
+          data.contacts.forEach( function(item, index){
+            var temp = '<tr>';
+                temp += '<td>'+item.no+'</td>';
+                temp += '<td>'+item.name+'</td>';
+                temp += '<td>'+item.tel+'</td>';
+                temp += '<td>'+item.address+'</td>';
+                temp += '</tr>';
+
+            $('#content').append(temp);
+          });
+        },
+        error: function(error) {
+          console.log(error.errorText);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>연락처 리스트</h2>
+    <div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td>아이디</td>
+            <td>성명</td>
+            <td>전화번호</td>
+            <td>주소</td>
+          </tr>
+        </thead>
+        <tbody id="content"></tbody>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>

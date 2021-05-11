@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test1(on_event).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+  	.hover {
+  		background-color: purple;
+  		color: yellow;
+  	}
+  	div {
+  		border: 1px solid gray;
+  		margin: 5px;
+  		padding: 3px;
+  		width: 200px;
+  		text-align: center;
+  	}
+  	button.default {
+  		background-color: aqua;
+  		border: 1px solid gray;
+  		padding: 5px;
+  		width: 100px;
+  		text-align: center;
+  	}
+  	button.hover {
+  		background-color: purple;
+  		color: yellow;
+  	}
+  	#dd {width: 500px;}
+  </style>
+  <script>
+  	$(document).ready(function(){
+  		// 발생된 이벤트 이름을 직접지정하여 수행
+  		$('#aa button').mouseenter(function(){
+  			$(this).addClass('hover');
+  		}).mouseleave(function(){
+  			$(this).removeClass('hover');
+  		});
+  		
+  		// 이벤트 감지 메소드 on을 이용한 처리
+  		$('#bb button').on('mouseenter',function(){
+  			$(this).addClass('hover');
+  		}).on('mouseleave',function(){
+  			$(this).removeClass('hover');
+  		});
+  		
+  		// toggleClass로 처리..
+  		$('#cc button').on('mouseenter mouseleave', function(){
+  			$(this).toggleClass('hover');
+  		});
+  		
+  		// 텍스트를 toggleClass로 처리..
+  		$('#dd span').on('mouseenter mouseleave', function(){
+  			$(this).toggleClass('hover');
+  		});
+  		
+  	});
+  </script>
+</head>
+<body>
+	<div id="aa">
+    <button class="default">회사소개</button>
+    <button class="default">CEO인사말</button>
+    <button class="default">회사연역</button>
+    <button class="default">회사오시는길</button>
+  </div>
+  <br/><hr/><br/>
+	<div id="bb">
+    <button class="default">회사소개</button>
+    <button class="default">CEO인사말</button>
+    <button class="default">회사연역</button>
+    <button class="default">회사오시는길</button>
+  </div>
+  <br/><hr/><br/>
+	<div id="cc">
+    <button class="default">회사소개</button>
+    <button class="default">CEO인사말</button>
+    <button class="default">회사연역</button>
+    <button class="default">회사오시는길</button>
+  </div>
+  <br/><hr/><br/>
+	<div id="dd">
+    <span class="default"><a href="#">회사소개</a></span>
+    <span class="default"><a href="#">CEO인사말</a></span>
+    <span class="default">회사연역</span>
+    <span class="default">회사오시는길</span>
+  </div>
+  <br/><hr/><br/>
+</body>
+</html>

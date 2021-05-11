@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test5(attr5).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+    	$('#toggle').click(function(){
+    		// 텍스트박스가 활성화 되어 있으면 비활성화로, 비활성화 되어 있으면 활성화로...
+    		if($('.one input[type="text"]').is(':enabled')) {
+    			$('.one input[type="text"]').attr('disabled', 'disabled');  // true
+    		}
+    		else {
+    			$('.one input[type="text"]').attr('disabled', false);
+    		}
+    	});
+    	
+    	$('#toggle2').click(function(){
+    		// 텍스트박스가 활성화 되어 있으면 비활성화로, 비활성화 되어 있으면 활성화로...
+    		var input = $('.two input[type="text"]');
+    		if(input.is(':enabled')) {
+    			input.attr('disabled', 'disabled');
+    		}
+    		else {
+    			input.attr('disabled', false);
+    		}
+    	});
+    });
+  </script>
+</head>
+<body>
+	<div id="container">
+	  <div class="one">
+	  	이름 : <input type="text" name="name" id="name" value="홍길동"/><br/>
+	  	전화 : <input type="text" name="tel" id="tel" value="010-123-4567"/><br/>
+	  	주소 : <input type="text" name="address" id="address" value="청주시 흥덕구"/><br/>
+	  	<input type="button" id="toggle" value="활성화/비활성화"/>
+	  </div>
+	  <hr/>
+	  <div class="two">
+	  	이름 : <input type="text" name="name" id="name" value="김말숙"/><br/>
+	  	전화 : <input type="text" name="tel" id="tel" value="010-345-4567"/><br/>
+	  	주소 : <input type="text" name="address" id="address" value="청주시 상당구"/><br/>
+	  	<input type="button" id="toggle2" value="활성화/비활성화"/>
+	  </div>
+	</div>
+</body>
+</html>

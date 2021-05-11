@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test12(appendTo).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  	$(document).ready(function(){
+  		var data = [];
+  		for(var i=0; i<100; i++) {
+  			data.push({
+  				no : i,
+  				name : 'data ' + i,
+  				tel : '010-1234-56' + i
+  			});
+  		}
+  		
+  		var dom = '<div>';
+  				dom += '<div></div>';
+  				dom += '<button>버튼1</button>';
+  				dom += '<button>버튼2</button>';
+  				dom += '</div>';
+  		
+  		/*		
+  		data.forEach(function(item, index){
+  			//console.log(item);
+  			$(dom).attr('id', item.no)
+  				.find('div').html(item.no + " : <b>" + item.name + "</b> : " + item.tel)
+  			  .appendTo('#demo');
+  		});
+  		*/
+  		
+  		/*
+  		data.forEach(function(item, index){
+  			//console.log(item);
+  			$(dom).attr('id', item.no)
+  				.find('div').html(item.no + " : <b>" + item.name + "</b> : " + item.tel)
+  				.next()
+  				.html('<u>추가</u>')
+  				.parent()
+  			  .appendTo('#demo');
+  		});
+  		*/
+  		
+  		data.map(function(item, index){
+  			$(dom).attr('id', item.no)
+  				.find('div').html(item.no + " : <b>" + item.name + "</b> : " + item.tel)
+  				.next()
+  				.html('<u>추가</u>')
+  				.parent()
+  			  .appendTo('#demo');
+  		});
+  		
+  	});
+  </script>
+</head>
+<body>
+	<div id="demo"></div>
+</body>
+</html>

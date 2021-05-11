@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test13(정적돔).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+  	.test {
+  		font-size: 20px;
+  		width: 400px;
+  		background-color: gray;
+  		border: 1px solid red;
+  		margin: 10px;
+  		padding: 10px;
+  	}
+  </style>
+  <script>
+    $(document).ready(function(){
+    	// 정적돔 : 기존에 만들어져있는 DOM에 대한 처리
+    	var dom = '<div>';
+    			dom += '<div>Hello My Homepage</div>';
+    			dom += '<div id="world">Hello World</div>';
+    			dom += '<div>Good Morning</div>';
+    			dom += '<div>Thank You!!</div>';
+    			dom += '</div>';
+    	//console.log(dom);
+    	//console.log($(dom));
+    	
+    	//var imsiDom = $(dom).find('div').first().addClass('test');
+    	var imsiDom = $(dom).find('#world').addClass('test');
+    	//console.log(dom);
+    	/* $('#demo').html(imsiDom); */
+    	$('#demo').html(imsiDom.parent());
+    });
+  </script>
+</head>
+<body>
+	<div id="demo"></div>
+</body>
+</html>

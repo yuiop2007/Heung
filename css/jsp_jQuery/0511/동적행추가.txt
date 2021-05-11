@@ -1,0 +1,48 @@
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<style>
+		th  { background-color:purple; color:yellow; }
+		.pkey { width:250px; }
+		.pname  { width:150px; }
+		.ptel  { width:150px; }
+		.pdel  { width:100px; }
+	</style>
+
+===================================================
+
+
+
+
+<body>
+	<div class="card-body" id="content">
+		<h2>추가할 데이터</h2>
+		<button name="add" class="pno"> 행 추가 </button>
+		<button name="saveall">모두 저장</button>
+		<div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th class="pkey">식별번호</th>
+						<th class="pname">이름</th>
+						<th class="ptel">전화번호</th>
+						<th class="pdel">삭제버튼</th>
+					</tr>
+				</thead>
+				<tbody id="rowbody">
+	
+				</tbody>
+			</table>
+			<br />
+			
+		</div>
+	</div>
+
+	<table style="display:none">
+		<tr id="temprow">
+			<td><input type="text" class="pkey" name="key" disabled /></td>
+			<td><input type="text" class="pname" name="name" /></td>
+			<td><input type="text" class="ptel" name="tel" /></td>
+			<td><input type="button" class="pdel" value="삭제" /></td>
+		</tr>
+	</table>
+
+</body>

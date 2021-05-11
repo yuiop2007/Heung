@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test3(한글입력금지).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  	$(document).ready(function(){
+  		$('#content input').on('keypress keyup blur', function(){
+  			var pattern = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣|\,\.\s]/;
+  			
+  			var str = $(this).val();
+  			
+  			var res = str.replace(pattern, '');
+  			
+  			$(this).val(res);
+  		});
+  	});
+  </script>
+</head>
+<body>
+	<div id="content">
+	  <form name="myform">
+	    <h3>아이디와 주소는 영문과 숫자만 가능합니다.</h3>
+	    <input type="text" name="mid"/><br/>
+	    <input type="text" name="address"/><br/>
+	  </form>
+	</div>
+</body>
+</html>

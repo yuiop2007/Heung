@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test14(슬라이드쇼)3.html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    img.scape_hidden {display: none;}
+    img.scape_visible{display: block;}
+  </style>
+  <script>
+  	$(document).ready(function(){
+  		// 슬라이드 이동하기 처리
+  		function viewSlide() {
+  			var slider = $('#slider');
+  			slider.find('img.scape_visible').removeClass('scape_visible');
+  			slider.find('img:first').appendTo('#slider').addClass('scape_visible');
+  		}
+  		
+  		// 슬라이드 시작버튼 클릭
+  		$('#slideStart').click(function(){
+  			handle = setInterval(viewSlide, 1500);
+  		});
+  		
+  		// 슬라이드 정지버튼 클릭
+  		$('#slideStop').click(function(){
+  			clearInterval(handle);
+  		});
+  		
+  		viewSlide();
+  	});
+  </script>
+</head>
+<body>
+  <div id="btn">
+    <button id="slideStart">Start</button>
+    <button id="slideStop">Stop</button>
+  </div>
+	<div id="slider">
+	  <img class="scape_hidden" src="../images/9.jpg" width="150px"/>
+	  <img class="scape_hidden" src="../images/8.jpg" width="150px"/>
+	  <img class="scape_hidden" src="../images/7.jpg" width="150px"/>
+	  <img class="scape_hidden" src="../images/6.jpg" width="150px"/>
+	  <img class="scape_hidden" src="../images/5.jpg" width="150px"/>
+	</div>
+</body>
+</html>

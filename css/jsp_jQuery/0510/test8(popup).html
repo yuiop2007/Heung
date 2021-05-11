@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test8(popup).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    #inner {
+			background-color: orange;
+			border: 1px solid gray;
+			width: 300px; 
+			height:500px;
+			position: absolute;
+			top: 100px;
+			left: 50px;    
+    }
+    #outer {
+			background-color: green;
+			border: 1px solid gray;
+			width: 300px; 
+			height:500px;
+			position: absolute;
+			top: 100px;
+			left: 50px;    
+    }
+  </style>
+  <script>
+  	$(document).ready(function(){
+  		// 팝업창의 초기 위치선정(배치: offset(x,y))
+  		var innerWidth = $('#inner').innerWidth();  // innerBox의 폭값 얻기
+  		$('#inner').offset({left:0, top:0});
+  		$('#outer').offset({left:innerWidth, top:0});
+  		
+  		$('#outer button').click(function(){
+  			/* $(this).parent().hide(); */
+  			$(this).parent().hide(500);
+  		});
+  		
+  		$('#inner button').click(function(){
+  			$(this).parent().hide();
+  			
+  			if($('#outer').is(':visible')) {
+  				$('#outer').offset({left:0, top:0});
+  			}
+  		});
+  	});
+  </script>
+</head>
+<body>
+  <div id="content">
+  	<div id="inner">
+  		<button>X</button>
+  	</div>
+  	<div id="outer">
+  		<button>X</button>
+  	</div>
+  </div>
+</body>
+</html>

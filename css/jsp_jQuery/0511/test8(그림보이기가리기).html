@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test8(그림보이기/가리기)</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+    	$('#btn1').click(function(){
+    		/* $('#imgDisplay').hide(500); */
+    		$('#imgDisplay').fadeOut(500);
+    	});
+    	
+    	$('#btn2').click(function(){
+    		$('#imgDisplay').show(500);
+    	});
+    });
+  </script>
+</head>
+<body>
+	<h2>그림 보이기/가리기</h2>
+	<div id="content">
+	  <input type="button" id="btn1" value="가리기"/>
+	  <input type="button" id="btn2" value="보이기"/><br/>
+	  <div id="imgDisplay">
+	    <img src="../images/9.jpg" width="200px"/>
+	  </div>
+	</div>
+</body>
+</html>

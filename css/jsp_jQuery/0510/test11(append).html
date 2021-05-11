@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test11(append).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+  	#content1, #content2 {
+  		width: 200px;
+  		margin: 10px;
+  		padding: 20px;
+  		border: 1px solid red;
+  	}
+  </style>
+  <script>
+    $(document).ready(function(){
+    	$('#content1').append('<h3>append</h3>');
+    	$('#content1').prepend('<h3>prepend</h3>');
+    	$('#content1').after('<h3>after</h3>');
+    	$('#content1').before('<h3>before</h3>');
+    	
+    	$('<h3>appendTo</h3>').appendTo('#content2');
+    	$('<h3>prependTo</h3>').prependTo('#content2');
+    	$('<h3>insertAfter</h3>').insertAfter('#content2');
+    	$('<h3>insertBefore</h3>').insertBefore('#content2');
+    	
+    });
+  </script>
+</head>
+<body>
+	<div id="container">
+	  <div id="content1">
+	    <!-- prepend구간 -->
+	    <div>기존 컨텐트1</div>
+	    <div>기존 컨텐트2</div>
+	    <!-- append구간 -->
+	  </div>
+	  <br/><hr/><br/>
+	  <div id="content2">
+	    <div>기존 컨텐트11</div>
+	    <div>기존 컨텐트22</div>
+	  </div>
+	</div>
+</body>
+</html>

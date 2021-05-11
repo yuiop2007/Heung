@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test12(슬라이드쇼)1.html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  	$(document).ready(function(){
+  		// 슬라이드 이동하기 처리
+  		function viewSlide() {
+  			var slider = $('#slider');
+  			slider.find('span.scape_visible').removeClass('scape_visible');
+  			slider.find('span:first').appendTo('#slider').addClass('scape_visible');
+  		}
+  		
+  		// 슬라이드 시작버튼 클릭
+  		$('#slideStart').click(function(){
+  			handle = setInterval(viewSlide, 1500);
+  		});
+  		
+  		// 슬라이드 정지버튼 클릭
+  		$('#slideStop').click(function(){
+  			clearInterval(handle);
+  		});
+  		
+  		viewSlide();
+  	});
+  </script>
+</head>
+<body>
+  <div id="btn">
+    <button id="slideStart">Start</button>
+    <button id="slideStop">Stop</button>
+  </div>
+	<div id="slider">
+	  <span class="scape_hidden"> 1.가 </span>
+	  <span class="scape_hidden"> 2.나 </span>
+	  <span class="scape_hidden"> 3.다 </span>
+	  <span class="scape_hidden"> 4.라 </span>
+	  <span class="scape_hidden"> 5.마 </span>
+	</div>
+</body>
+</html>

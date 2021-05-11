@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test4(attr4).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  	$(document).ready(function(){
+  		$('#img1 img').attr({
+  			title: '9번이미지입니다.',
+  			alt: '9번이미지입니다.',
+  			src: '../images/9.jpg',
+  			width: '150px'
+  		});
+  		
+  		// 변수로 받아서 처리해 본다.
+  		var obj = {
+  				title: '8번이미지입니다.',
+	  			alt: '8번이미지입니다.',
+	  			src: '../images/8.jpg',
+	  			width: '150px'
+  		}
+  		$('#img2 img').attr(obj);
+  	});
+  </script>
+</head>
+<body>
+	<h2>그림속성 처리</h2>
+	<div id="container">
+		<div id="img1"><img /></div>
+		<div id="img2"><img /></div>
+	</div>
+</body>
+</html>

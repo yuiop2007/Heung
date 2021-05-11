@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test6(보이기_가리기)4.html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+    	$('#rehide').click(function(){
+	    	$('#aa1').fadeOut(500);
+	    	$('#aa2').fadeOut('normal');
+	    	$('#aa3').fadeOut('slow');
+	    	$('#aa4').fadeOut('fast');
+	    	
+    		
+    	});
+    	$('#reshow').click(function(){
+    		$('#aa1').fadeIn(500);
+    		$('#aa2').fadeIn('normal');
+    		$('#aa3').fadeIn('slow');
+    		$('#aa4').fadeIn('fast');
+    		//$('p').fadeIn(500);
+    	});
+    });
+  </script>
+</head>
+<body>
+	<h2><span id="reshow">댓글 보이기(클릭)</span>/<span id="rehide">가리기(더블클릭)</span></h2>
+	<div id="reply">
+	  <p id="aa1">댓글1</p>
+	  <p id="aa2">댓글2</p>
+	  <p id="aa3">댓글3</p>
+	  <p id="aa4">댓글4</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test14(empty).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    div#aa, div#bb {
+    	width: 300px;
+    	border: 1px solid gray;
+    	margin: 5px;
+    }
+    div#cc, div#dd {
+    	width: 400px;
+    	border: 1px solid red;
+    	margin: 5px;
+    }
+  </style>
+  <script>
+  	$(document).ready(function(){
+  		var imsiDetach;
+  		
+  		$('#detach').click(function(){
+  			imsiDetach = $('#bb').detach();  // 잘라내기
+  		});
+  		
+  		$('#append').click(function(){
+  			$('#cc').append(imsiDetach);		// 붙이기
+  		});
+  		
+  		$('#remove').click(function(){
+  			$('#bb').remove();		// 지우기
+  		});
+  		
+  		$('#empty').click(function(){
+  			$('#bb').empty();		// 삭제
+  		});
+  		
+  	});
+  </script>
+</head>
+<body>
+  <div>
+    <h3>객체 잘라내기/붙이기/지우기/없애기</h3>
+    <p> 잘라내기 : detach() </p>
+    <p> 붙이기 : append() </p>
+    <p> 지우기 : remove() </p>
+    <p> 삭제 : empty() </p>
+  </div>
+  <div class="content">
+    <div id="a">진달래 꽃</div>
+    <div>김소월</div>
+    <br/><hr size="10px" color="gray"/><br/>
+    <div>
+      <button id="detach">detach</button>
+      <button id="append">append</button>
+      <button id="remove">remove</button>
+      <button id="empty">empty</button>
+    </div>
+    <div id="aa">
+	    <div class="test">나보기가 역겨워 가실때에는</div>
+	    <div class="test main">말없이 고이보내 드리오리다.</div>
+    </div>
+    <hr/>
+    <div id="bb">~중략~
+      <span>영변에 약산 진달래꽃</span>
+      <h2 id='a'>아름따다 가실길에 뿌리오리다.</h2>
+      <ul>
+        <li id='a'>하나</li>
+        <li>둘</li>
+        <li id='a'>셋</li>
+      </ul>
+    </div>
+    <hr/>
+    <div id="cc">
+	    <div id="b">가시는 걸음걸음 놓인 그꽃을</div>
+	    <div class="test">사뿐히 즈려밟고 가시옵소서</div>
+	  </div>
+    <hr/>
+    <div id="dd">
+	    <div class="main">나보기가 역겨워 가실때에는</div>
+	    <div id='a'>죽어도 아니눈물 흘리오리다.</div>
+	  </div>
+    <hr/>
+    <div>
+      <h1>작업끝!!!</h1>
+    </div>
+  </div>
+</body>
+</html>

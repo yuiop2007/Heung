@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test5(보이기_가리기)3.html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+    	$('#reply').click(function(){
+    		$(this).hide(500);
+    	});
+    	
+    	$('#reshow').click(function(){
+    		$('p').toggle(600);
+    	});
+    	
+    });
+  </script>
+</head>
+<body>
+	<h2 id="reshow">댓글 보이기(클릭)/가리기(더블클릭)</h2>
+	<div id="reply">
+	  <p>댓글1</p>
+	  <p>댓글2</p>
+	  <p>댓글3</p>
+	  <p>댓글4</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test9(slideUpDown).html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+    	$('#title').mouseenter(function(){
+    		/* $('#submenu').show(500); */
+    		$('#submenu').slideDown(500);
+    	});
+    	$("#submenu").mouseleave(function(){
+    		/* $("#submenu").hide(500); */
+    		$("#submenu").slideUp(500);
+    	});
+    });
+  </script>
+  <style>
+    #title, #submenu {
+    	background-color: aqua;
+    	border: 1px solid gray;
+    	padding: 5px;
+    	text-align: center;
+    }
+    #submenu {
+    	display: none;
+    	padding: 50px;
+    }
+  </style>
+</head>
+<body>
+	<div id="title">메뉴 목록이 들어가는 곳입니다.</div>
+	<div id="submenu">이곳은 서브메뉴 입니다.</div>
+	<h2>이곳은 본문입니다.</h2>
+</body>
+</html>
