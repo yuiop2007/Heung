@@ -5,8 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>연락처 리스트</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
     $(document).ready(function(){
       /*
@@ -28,7 +31,7 @@
         method: 'GET',
         url: 'http://localhost:3000/contacts',
         data:{
-          pageno: 2,
+          pageno: 1,
           pagesize: 15
         },
         success: function(data) {
@@ -44,7 +47,7 @@
                 temp += '<td>'+item.address+'</td>';
                 temp += '</tr>';
 
-            $('#content').append(temp);
+            $('#content').append(temp);   
           });
         },
         error: function(error) {
@@ -58,7 +61,7 @@
   <div class="container">
     <h2>연락처 리스트</h2>
     <div>
-      <table class="table table-hover">
+      <table class="table table-dark table-hover">
         <thead>
           <tr>
             <td>아이디</td>
