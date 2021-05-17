@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>cj2103</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- URL 매핑처리  -->
+  <servlet>
+  	<servlet-name>Test61</servlet-name>
+  	<servlet-class>t0513.Test6</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Test61</servlet-name>
+  	<url-pattern>/T62</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Test5</servlet-name>
+  	<servlet-class>t0513.Test5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Test5</servlet-name>
+  	<url-pattern>/T555</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>test1</servlet-name>
+  	<servlet-class>t0517_Filter.Test1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>test1</servlet-name>
+  	<url-pattern>/t0517_Filter/T1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>t0517_t1</servlet-name>
+  	<servlet-class>t0517_init.Test1</servlet-class>
+  	
+  	<!-- <init-param>
+  		<param-name>mid</param-name>
+  		<param-value>admin</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>pwd</param-name>
+  		<param-value>1234</param-value>
+  	</init-param> -->
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>t0517_t1</servlet-name>
+  	<url-pattern>/t0517_t1</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Filter 매핑처리 -->
+  <!-- <filter>
+  	<filter-name>encodingFilter</filter-name>
+  	<filter-class>t0517_Filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>encodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping> -->
+  
+  <!-- 공통변수에 초기값 할당 -->
+  <context-param>
+  	<param-name>mid</param-name>
+  	<param-value>user</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>pwd</param-name>
+  	<param-value>9876</param-value>
+  </context-param>
+  
+  <!-- 웹 어플리케이션 감시 -->
+  <listener>
+  	<listener-class>t0517_LifeCycle.T5_LifeCycle</listener-class>
+  </listener>
+</web-app>
